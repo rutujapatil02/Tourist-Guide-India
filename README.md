@@ -19,5 +19,5 @@ If you are developing a production application, we recommend using TypeScript wi
 # Tourist-Guide-India
 
 Prachi Sanika 
-rutuja
+rutuja patil
 >>>>>>> c47e471ceb7469dc5c83af834024e7f39cb46323
