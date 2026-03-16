@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 
-
 // Image Imports (Ensure these paths are correct in your project)
 import HomePageFirst from "../assets/images/HomeImages/HomePageFirst.jpg";
 import Tajmahal from "../assets/images/HomeImages/Tajmahal.jpg";
@@ -133,6 +132,8 @@ const Home = () => {
           Our diverse states stretch across a subcontinent, so exploring them all in one trip isn't always possible. 
           Find out what destinations should be high on your bucket list with our list of iconic places.
         </p>
+
+      
 
         {destinations.map((place) => (
           <div key={place.id} className="mb-24">

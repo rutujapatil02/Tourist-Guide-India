@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { FaSearch, FaChevronDown, FaRegHeart } from "react-icons/fa";
 import { MdOutlineTravelExplore } from "react-icons/md";
-import logo from "../assets/images/logo.png";
+import logo from '../../assets/images/logo.png';
 
-function Header() {
+function Header({ onTogglePlaces }) {
   const [activeMenu, setActiveMenu] = useState(null);
-
   const menuItems = ["Be inspired", "Places to go", "Things to do", "Plan your trip"];
 
   const handleMenuClick = (name) => {
     setActiveMenu(activeMenu === name ? null : name);
+    // If they clicked "Places to go", trigger the toggle
+    if (name === "Places to go" && onTogglePlaces) {
+      onTogglePlaces();
+    }
   };
 
   return (
     <header className="flex items-center justify-between px-12 py-4 bg-gray-100">
-
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer">
         <span className="text-orange-500 text-xl font-bold">India</span>
