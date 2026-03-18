@@ -19,13 +19,13 @@ import Mahableshwar from "../assets/images/HomeImages/Mahableshwar.jpg";
 
 const destinations = [
   { 
-    id: 1, name: "Taj Mahal", img: Tajmahal, loc: "Agra, Uttar Pradesh", 
+    id: 1, name: "Agra", img: Tajmahal, loc: "Agra, Uttar Pradesh", 
     when: "The best time to visit the Taj Mahal is between October and March, when the weather is cool and pleasant. Sunrise visits are highly recommended to witness the changing hues of the marble.",
     desc: "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna. A UNESCO World Heritage site, it stands as the ultimate symbol of love and Mughal architectural brilliance.",
     guideLink: "tajmahal"
   },
   { 
-    id: 2, name: "Jaipur", img: Jaypur, loc: "Jaipur, Rajasthan", 
+    id: 2, name: "Rajsthan", img: Jaypur, loc: "Jaipur, Rajasthan", 
     when: "Between November and February is ideal for Jaipur. The winter sun is perfect for exploring hilltop forts like Amer and Nahargarh without the intense desert heat.",
     desc: "In the royal heart of Rajasthan, the 'Pink City' meets the modern world. Jaipur is a tapestry of majestic forts, intricate palaces, and vibrant bazaars. From the honeycomb facade of Hawa Mahal to the astronomical wonders of Jantar Mantar, every corner tells a story of Rajput bravery and artistic flair.",
     guideLink: "jaipur"
@@ -43,31 +43,31 @@ const destinations = [
     guideLink: "kerala"
   },
   { 
-    id: 5, name: "Ladakh", img: Ladakh, loc: "Leh, Ladakh", 
+    id: 5, name: "Jammu-Kashmir", img: Ladakh, loc: "Leh, Ladakh", 
     when: "April to July is the primary window for visitors, as this is when the mountain passes are clear of snow and the weather is pleasant for trekking and sightseeing.",
     desc: "Ladakh is a high-altitude desert known for its dramatic mountain landscapes, crystal clear lakes like Pangong Tso, and ancient Buddhist monasteries perched on rocky cliffs. It is a haven for adventure seekers and those searching for spiritual tranquility.",
     guideLink: "ladakh"
   },
   { 
-    id: 6, name: "Varanasi", img: Varanasi, loc: "Ghats of Ganges", 
+    id: 6, name: "Uttar-Pradesh", img: Varanasi, loc: "Ghats of Ganges", 
     when: "November to February offers a cool breeze from the river, making walking the ancient, narrow alleys of this spiritual city much more enjoyable.",
     desc: "Varanasi is one of the world's oldest continually inhabited cities. It is the spiritual heart of India, where pilgrims flock to the holy Ganges River. The evening Ganga Aarti at Dashashwamedh Ghat is a soul-stirring experience of fire, chants, and devotion.",
     guideLink: "varanasi"
   },
   { 
-    id: 7, name: "Udaipur", img: Udaypur, loc: "Udaipur, Rajasthan", 
+    id: 7, name: "Rajsthan", img: Udaypur, loc: "Udaipur, Rajasthan", 
     when: "September to March provides the most pleasant weather, and lake levels are typically high following the monsoon season.",
     desc: "The 'City of Lakes', Udaipur is often called the Venice of the East. With its romantic palaces rising out of Lake Pichola and the rugged Aravalli hills as a backdrop, it remains one of the most beautiful and scenic cities in India.",
     guideLink: "udaipur"
   },
   { 
-    id: 8, name: "Rishikesh", img: Rishikesh, loc: "Uttarakhand", 
+    id: 8, name: "UttaraKhand", img: Rishikesh, loc: "Uttarakhand", 
     when: "March to May and late September to November are ideal. These months offer the perfect balance for river rafting and outdoor yoga retreats.",
     desc: "Nestled in the foothills of the Himalayas along the banks of the Ganges, Rishikesh is the 'Yoga Capital of the World'. It offers a perfect blend of spirituality, meditation, and high-adrenaline white-water adventure.",
     guideLink: "rishikesh"
   },
   { 
-    id: 9, name: "Darjeeling", img: DARJEELING, loc: "West Bengal", 
+    id: 9, name: "West-Bengol", img: DARJEELING, loc: "West Bengal", 
     when: "April to June and October to December are the best times to visit, providing the clearest views of the majestic Himalayan peaks.",
     desc: "Famous for its world-class tea plantations and the historic 'Toy Train', Darjeeling offers breathtaking panoramic views of Kanchenjunga, the world's third-highest peak. Its colonial-era charm and Buddhist monasteries make it a unique mountain retreat.",
     guideLink: "darjeeling"
@@ -79,7 +79,7 @@ const destinations = [
     guideLink: "andaman"
   },
   { 
-    id: 11, name: "Mahabaleshwar", img: Mahableshwar, loc: "Maharashtra", 
+    id: 11, name: "Maharashtra", img: Mahableshwar, loc: "Maharashtra", 
     when: "December to February is the peak season, though the monsoon months (June-September) transform the region into a lush green paradise filled with waterfalls.",
     desc: "A charming hill station in the Western Ghats, Mahabaleshwar is famous for its rolling strawberry farms, ancient temples, and numerous viewpoints that overlook deep, evergreen valleys.",
     guideLink: "mahabaleshwar"
@@ -100,14 +100,21 @@ const Home = () => {
       </nav>
 
       {/* 2. Hero Image (Full Width) */}
-      <div className="w-full h-[90vh] relative">
+      <div className="w-full h-[100vh] relative">
         <img src={HomePageFirst} alt="Main" className="w-full h-full object-cover " />
-        <div className="absolute top-8 right-10">
-           <div className="bg-yellow-400 p-2 rounded-full shadow-lg cursor-pointer"><div >
-               <FaMapMarkerAlt size={20} color="black" />
-           </div>
-        </div>
-        </div>
+        <div className="absolute top-8 right-10 group">
+  
+  {/* Marker Icon */}
+  <div className="bg-yellow-400 p-2 rounded-full shadow-lg cursor-pointer">
+    <FaMapMarkerAlt size={20} className="text-black" />
+  </div>
+
+  {/* Tooltip */}
+  <div className="absolute right-0 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-xs px-3 py-1 rounded-md whitespace-nowrap shadow-lg">
+  Mumbai, Maharashtra
+  </div>
+
+</div>
       </div>
 
       {/* 3. Main Header Section (Matching Image 2) */}
