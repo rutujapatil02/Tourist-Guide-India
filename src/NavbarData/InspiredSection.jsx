@@ -1,39 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { inspiredData } from '../Data/InspiredData';
 import { FaArrowRight } from "react-icons/fa";
 
 const InspiredSection = () => {
-  const [activeTab, setActiveTab] = useState("Travel inspiration");
-
-  const filteredItems = inspiredData.activities.filter(
-    (item) => item.category === activeTab
+  // Directly filter for "Travel inspiration" since the navbar is removed
+  const displayItems = inspiredData.activities.filter(
+    (item) => item.category === "Travel inspiration"
   );
 
   return (
-    <section className="w-full bg-white border-t border-gray-100 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300 z-50">
+    <section className="w-full bg-white border-t border-gray-100 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-300 z-50 absolute left-0">
       <div className="max-w-7xl mx-auto py-10 px-6">
-
-        {/* Category Pills */}
-        <div className="flex justify-center flex-wrap gap-3 mb-10">
-          {inspiredData.categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`px-6 py-2 rounded-full text-sm font-bold transition-all border ${
-                activeTab === cat 
-                ? 'bg-black text-white border-black shadow-md' 
-                : 'bg-gray-100 text-gray-500 border-transparent hover:bg-gray-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid SAME as other sections */}
+        
+        {/* Grid Display - Now showing directly without a navbar */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          {filteredItems.map((item) => (
+          {displayItems.map((item) => (
             <div key={item.id} className="group cursor-pointer">
               
               {/* Image Box */}
@@ -55,9 +37,8 @@ const InspiredSection = () => {
             </div>
           ))}
 
-          {/* View More Card (Same Style) */}
+          {/* View More Card */}
           <div className="group cursor-pointer">
-            
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100 flex items-center justify-center">
               <div className="flex flex-col items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
@@ -68,11 +49,9 @@ const InspiredSection = () => {
                 </span>
               </div>
             </div>
-
           </div>
 
         </div>
-
       </div>
     </section>
   );
