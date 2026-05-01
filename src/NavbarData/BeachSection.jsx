@@ -1,12 +1,17 @@
+// src/NavbarData/PlacesToGo/Beaches/BeachSection.jsx
 import React from 'react';
-import { beachData } from '../Data/BeachData';
+import { beachData } from "../Data/BeachData";
 import { FaArrowRight } from "react-icons/fa";
 
-const BeachSection = () => {
+const BeachSection = ({ onSelectBeach }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
       {beachData.map((beach) => (
-        <div key={beach.id} className="group cursor-pointer">
+        <div
+          key={beach.id}
+          className="group cursor-pointer"
+          onClick={() => onSelectBeach(beach.id)}
+        >
           <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
             <img
               src={beach.image}

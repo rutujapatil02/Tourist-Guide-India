@@ -1,33 +1,72 @@
-import React from 'react';
-import { aboutIndiaData } from '../Data/AboutIndiaData';
+import React, { useState } from 'react';
+import { aboutIndiaData } from "../Data/AboutIndiaData";
 import { FaArrowRight } from "react-icons/fa";
+import HistoryCultureSection from "./PlanTrip/AboutIndia/HistoryCultureSection";
+import GeographySection from "./PlanTrip/AboutIndia/GeographySection";
+import WeatherSection from "./PlanTrip/AboutIndia/WeatherSection"; 
+import PLanguageSection from "./PlanTrip/AboutIndia/PLanguageSection"; // Import the new section
 
 const AboutIndiaSection = () => {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {aboutIndiaData.map((item) => (
-        <div key={item.id} className="group cursor-pointer">
-          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          </div>
-          <div className="mt-2 text-center py-4 bg-gray-50 rounded-b-xl group-hover:bg-gray-100 transition-all border-b-2 border-transparent group-hover:border-gray-200">
-            <span className="font-bold text-gray-900">{item.name}</span>
-          </div>
-        </div>
-      ))}
+  const [view, setView] = useState('grid');
 
-      {/* View More Card */}
-      <div className="group cursor-pointer">
-        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100 flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
-              <FaArrowRight className="text-black text-lg" />
+  const handleBackToGrid = () => {
+    setView('grid');
+    window.scrollTo(0, 0);
+  };
+
+  // Switch to the correct view based on state
+  if (view === 'history') return <HistoryCultureSection onNavigateBack={handleBackToGrid} />;
+  if (view === 'geography') return <GeographySection onNavigateBack={handleBackToGrid} />;
+  if (view === 'weather') return <WeatherSection onNavigateBack={handleBackToGrid} />;
+  if (view === 'people') return <PLanguageSection onNavigateBack={handleBackToGrid} />; // Render People section
+
+  return (
+    <div className="w-full bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto p-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {aboutIndiaData.map((item) => (
+            <div 
+              key={item.id} 
+              className="group cursor-pointer"
+              onClick={() => {
+                const name = item.name.trim();
+                
+                // Logic to switch views based on the card name
+                if (name === "History and Culture") {
+                  setView('history');
+                } else if (name === "Geography and Landscapes") {
+                  setView('geography');
+                } else if (name === "Weather and Seasons") {
+                  setView('weather');
+                } else if (name === "People and Language") {
+                  setView('people');
+                }
+              }}
+            >
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
+                <img 
+                  src={item.image} 
+                  alt={item.name} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+              </div>
+              {/* Updated border color to #3BB0C1 to match your navbar style */}
+              <div className="mt-4 text-center py-5 bg-gray-50 rounded-2xl group-hover:bg-gray-100 transition-colors border-b-4 border-transparent group-hover:border-[#3BB0C1]">
+                <span className="font-bold text-gray-900 text-lg">{item.name}</span>
+              </div>
             </div>
-            <span className="font-bold text-gray-900">View more</span>
+          ))}
+
+          {/* View More Card */}
+          <div className="group cursor-pointer">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-gray-50 flex items-center justify-center border-2 border-dashed border-gray-200 group-hover:border-[#3BB0C1]/30 transition-all">
+              <div className="flex flex-col items-center gap-4">
+                <div className="w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <FaArrowRight className="text-gray-900" />
+                </div>
+                <span className="font-bold text-gray-800">View more</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

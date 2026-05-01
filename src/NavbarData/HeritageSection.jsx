@@ -1,24 +1,31 @@
-import React from 'react';
-import { heritageData } from '../Data/HeritageData';
+// src/NavbarData/PlacesToGo/Heritage/HeritageSection.jsx
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { heritageData as basicHeritageData } from "../Data/HeritageData";
 
-const HeritageSection = () => {
+const HeritageSection = ({ onSelectPlace }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {heritageData.map((site) => (
-        <div key={site.id} className="group cursor-pointer">
+      {basicHeritageData.map((site) => (
+        <div
+          key={site.id}
+          className="group cursor-pointer"
+          onClick={() => onSelectPlace(site)}
+        >
           {/* Image Container */}
           <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
             <img
               src={site.image}
               alt={site.name}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
             />
           </div>
 
           {/* Label Section */}
           <div className="mt-2 text-center py-4 bg-gray-50 rounded-b-xl group-hover:bg-gray-100 transition-all border-b-2 border-transparent group-hover:border-gray-200">
             <span className="font-bold text-gray-900">{site.name}</span>
+            <p className="text-xs text-gray-500 mt-0.5">{site.location}</p>
           </div>
         </div>
       ))}

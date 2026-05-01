@@ -7,7 +7,7 @@ export const thingsData = {
       id: 1,
       category: "Culture",
       name: "Aboriginal experiences", 
-      img: Aboriginal
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9eBE0lSQLoCrfleUCHhuqPGvsKoT6S05m_A&s"
     },
     { 
       id: 2,

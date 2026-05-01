@@ -1,11 +1,15 @@
-import React from 'react';
-import { familyData } from '../Data/FamilyData';
+import React from "react";
+import { familyData } from "../Data/FamilyData";
 
-const FamilySection = () => {
+const FamilySection = ({ onSelect }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {familyData.map((item) => (
-        <div key={item.id} className="group cursor-pointer">
+        <div
+          key={item.id}
+          className="group cursor-pointer"
+          onClick={() => onSelect(item.name)}
+        >
           <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
             <img
               src={item.image}

@@ -1,35 +1,54 @@
-import React from 'react';
-import { visasAndEntryData } from '../Data/VisasAndEntryData';
-import { FaArrowRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import { visasAndEntryData } from '../Data/PlanTrip/VisasEntry/VisaData';
+import VisaSection from './PlanTrip/VisasEntry/VisaSection';
+import CustomsSection from './PlanTrip/VisasEntry/CustomsSection';
+import InsuranceSection from './PlanTrip/VisasEntry/InsuranceSection';
 
 const VisasAndEntrySection = () => {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {visasAndEntryData.map((item) => (
-        <div key={item.id} className="group cursor-pointer">
-          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100">
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          </div>
-          <div className="mt-2 text-center py-4 bg-gray-50 rounded-b-xl group-hover:bg-gray-100 transition-all border-b-2 border-transparent group-hover:border-gray-200">
-            <span className="font-bold text-gray-900">{item.name}</span>
-          </div>
-        </div>
-      ))}
+  const [activeView, setActiveView] = useState(null);
 
-      {/* View More Card */}
-      <div className="group cursor-pointer">
-        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl bg-gray-100 flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110">
-              <FaArrowRight className="text-black text-lg" />
+  // Helper to wrap detail sections for full-width execution
+  const renderDetailView = (Component) => (
+    /* Using w-screen and negative margins ensures the component breaks 
+       out of any parent 'max-w' or 'px' constraints.
+    */
+    <div className="relative z-[50] bg-white w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-[100px]"> 
+      <Component onBack={() => setActiveView(null)} />
+    </div>
+  );
+
+  if (activeView === 'visa') return renderDetailView(VisaSection);
+  if (activeView === 'customs') return renderDetailView(CustomsSection);
+  if (activeView === 'insurance') return renderDetailView(InsuranceSection);
+
+  return (
+    <div className="w-full bg-white">
+      {/* The grid remains contained and centered */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-6 max-w-[1400px] mx-auto items-stretch">
+        {visasAndEntryData.map((item) => (
+          <div 
+            key={item.id} 
+            className="group cursor-pointer flex flex-col h-full"
+            onClick={() => {
+              if (item.name === "Visa requirements") setActiveView('visa');
+              if (item.name === "Customs and border protection") setActiveView('customs');
+              if (item.name === "Travel insurance") setActiveView('insurance');
+            }}
+          >
+            <div className="relative aspect-[3/2] overflow-hidden rounded-t-xl bg-gray-100 shadow-sm">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
             </div>
-            <span className="font-bold text-gray-900">View more</span>
+            <div className="flex-grow py-5 px-3 bg-white border-x border-b border-gray-100 rounded-b-xl shadow-sm text-center flex items-center justify-center">
+              <span className="font-bold text-[#1A1A1A] text-base leading-tight">
+                {item.name}
+              </span>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
