@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import HistoryCultureSection from "./PlanTrip/AboutIndia/HistoryCultureSection";
 import GeographySection from "./PlanTrip/AboutIndia/GeographySection";
 import WeatherSection from "./PlanTrip/AboutIndia/WeatherSection"; 
-import PLanguageSection from "./PlanTrip/AboutIndia/PLanguageSection"; // Import the new section
+import PLanguageSection from "./PlanTrip/AboutIndia/PLanguageSection";
 
 const AboutIndiaSection = () => {
   const [view, setView] = useState('grid');
@@ -14,12 +14,13 @@ const AboutIndiaSection = () => {
     window.scrollTo(0, 0);
   };
 
-  // Switch to the correct view based on state
+  // Detail views (each already has its own breadcrumb)
   if (view === 'history') return <HistoryCultureSection onNavigateBack={handleBackToGrid} />;
   if (view === 'geography') return <GeographySection onNavigateBack={handleBackToGrid} />;
   if (view === 'weather') return <WeatherSection onNavigateBack={handleBackToGrid} />;
-  if (view === 'people') return <PLanguageSection onNavigateBack={handleBackToGrid} />; // Render People section
+  if (view === 'people') return <PLanguageSection onNavigateBack={handleBackToGrid} />;
 
+  // Main grid – NO breadcrumb here
   return (
     <div className="w-full bg-white min-h-screen">
       <div className="max-w-7xl mx-auto p-10">
@@ -30,17 +31,10 @@ const AboutIndiaSection = () => {
               className="group cursor-pointer"
               onClick={() => {
                 const name = item.name.trim();
-                
-                // Logic to switch views based on the card name
-                if (name === "History and Culture") {
-                  setView('history');
-                } else if (name === "Geography and Landscapes") {
-                  setView('geography');
-                } else if (name === "Weather and Seasons") {
-                  setView('weather');
-                } else if (name === "People and Language") {
-                  setView('people');
-                }
+                if (name === "History and Culture") setView('history');
+                else if (name === "Geography and Landscapes") setView('geography');
+                else if (name === "Weather and Seasons") setView('weather');
+                else if (name === "People and Language") setView('people');
               }}
             >
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-gray-100 shadow-sm">
@@ -50,14 +44,11 @@ const AboutIndiaSection = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
               </div>
-              {/* Updated border color to #3BB0C1 to match your navbar style */}
               <div className="mt-4 text-center py-5 bg-gray-50 rounded-2xl group-hover:bg-gray-100 transition-colors border-b-4 border-transparent group-hover:border-[#3BB0C1]">
                 <span className="font-bold text-gray-900 text-lg">{item.name}</span>
               </div>
             </div>
           ))}
-
-          {/* View More Card */}
           <div className="group cursor-pointer">
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-gray-50 flex items-center justify-center border-2 border-dashed border-gray-200 group-hover:border-[#3BB0C1]/30 transition-all">
               <div className="flex flex-col items-center gap-4">

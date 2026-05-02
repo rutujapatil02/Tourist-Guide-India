@@ -1,54 +1,117 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SundarbansData } from '../../../Data/ThingsToDo/Nature/SundarbansData';
+import { FaHome, FaArrowLeft } from 'react-icons/fa';
 import Footer from '../../../components/Footer';
 
-const SundarbansSection = ({ onBack }) => {
+const SundarbansSection = ({ 
+  onBack,                    // back to Nature main grid
+  onBackToThingsToDo,        // optional
+  onGoHome                   // optional
+}) => {
   const navigate = useNavigate();
   const { hero, details } = SundarbansData;
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
+  // Navigation handlers
+  const handleHome = () => {
+    if (onGoHome) onGoHome();
+    else navigate('/');
+  };
+
+  const handleThingsToDo = () => {
+    if (onBackToThingsToDo) onBackToThingsToDo();
+    else if (onBack) onBack();
+    else navigate(-1);
+  };
+
+  const handleNature = () => {
+    if (onBack) onBack();
+    else navigate(-1);
+  };
+
+  // Breadcrumb Component
+  const Breadcrumb = () => (
+    <div className="w-full bg-gradient-to-r from-[#3BB0C1] to-[#48abbc] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-medium shadow-md">
+      <button onClick={handleHome} className="flex items-center gap-1 hover:text-gray-200 transition-colors">
+        <FaHome className="w-4 h-4" />
+        <span>Home</span>
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      <button onClick={handleThingsToDo} className="hover:text-gray-200 transition-colors">
+        Things to Do
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      <button onClick={handleNature} className="hover:text-gray-200 transition-colors">
+        Nature
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      <span className="opacity-95 font-semibold">Sundarbans</span>
+    </div>
+  );
+
   return (
-    <div className="fixed inset-0 z-[150] bg-white w-screen h-screen overflow-y-auto overflow-x-hidden">
-      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
-        <div className="max-w-7xl mx-auto py-6 px-10 flex items-center gap-2 text-[12px] text-white font-bold uppercase tracking-widest">
-          <button onClick={() => navigate('/')} className="hover:text-[#3BB0C1]">Home</button>
-          <span className="opacity-40">/</span>
-          <button onClick={onBack} className="hover:text-[#3BB0C1]">Things To Do</button>
-          <span className="opacity-40">/</span>
-          <span className="text-[#3BB0C1]">Sundarbans</span>
+    <div className="bg-white min-h-screen">
+      <Breadcrumb />
+
+      {/* Hero Section */}
+      <div className="relative h-[65vh] md:h-[75vh] w-full overflow-hidden">
+        <img 
+          src={hero.backgroundImage} 
+          className="w-full h-full object-cover" 
+          alt="Sundarbans" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+          <h1 className="text-white text-5xl md:text-8xl lg:text-9xl font-serif font-bold drop-shadow-2xl">
+            {hero.title}
+          </h1>
+          <p className="text-white/90 max-w-2xl mt-6 text-lg md:text-xl font-light italic">
+            "{hero.description}"
+          </p>
         </div>
       </div>
 
-      <div className="relative h-[75vh] w-full">
-        <img src={hero.backgroundImage} className="w-full h-full object-cover" alt="Sundarbans" />
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-white text-6xl md:text-9xl font-serif font-bold uppercase tracking-tighter">{hero.title}</h1>
-          <p className="text-white/90 max-w-2xl mt-8 text-lg md:text-xl font-light italic">"{hero.description}"</p>
-        </div>
-      </div>
+      {/* Overlapping Container */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 -mt-16 md:-mt-24 pb-20">
+        <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border-t-4 border-[#48abbc]">
 
-      <div className="max-w-7xl mx-auto px-6 -mt-32 relative z-10 pb-32">
-        <div className="bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] p-8 md:p-20 rounded-xl border-t-[10px] border-[#3BB0C1]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+          {/* Details Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             {details.map((item) => (
-              <div key={item.id} className="group space-y-8 text-left">
-                <div className="overflow-hidden rounded-xl shadow-xl aspect-video bg-gray-100">
-                  <img src={item.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt={item.title} />
+              <div key={item.id} className="group space-y-5">
+                <div className="rounded-2xl overflow-hidden shadow-md aspect-video bg-gray-100">
+                  <img 
+                    src={item.image} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    alt={item.title} 
+                  />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#3BB0C1] pl-4">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed text-lg italic">{item.info}</p>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 border-l-4 border-[#48abbc] pl-4 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-base md:text-lg italic">
+                    {item.info}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-24 text-center">
-             <button onClick={onBack} className="bg-gray-900 text-white px-16 py-5 rounded-full font-bold text-[11px] tracking-[0.5em] uppercase hover:bg-[#3BB0C1] transition-all duration-300">Return to Nature Explorer</button>
+
+          {/* Back to Nature Button */}
+          <div className="mt-16 text-center pt-6 border-t border-gray-100">
+            <button
+              onClick={handleNature}
+              className="inline-flex items-center gap-2 text-gray-500 hover:text-[#48abbc] transition-colors text-sm font-medium"
+            >
+              <FaArrowLeft size={12} /> Back to Nature
+            </button>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

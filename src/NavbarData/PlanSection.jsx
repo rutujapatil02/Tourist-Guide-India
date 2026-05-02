@@ -20,7 +20,7 @@ import ToursSection from './PlanTrip/PlanningTools/ToursSection';
 import TransportSection from './PlanTrip/PlanningTools/TransportSection';
 import InformationCenterSection from './PlanTrip/PlanningTools/InformationCenterSection';
 
-const PlanSection = () => {
+const PlanSection = ({ onClose }) => {
   const [activeTab, setActiveTab] = useState("Planning tools");
   
   const [showBeginnerGuide, setShowBeginnerGuide] = useState(false);
@@ -72,16 +72,10 @@ const PlanSection = () => {
     gettingAroundInDetail;
 
   return (
-    <div className={`
-      ${isOverlayActive 
-        ? 'fixed inset-0 z-[100] bg-white overflow-y-auto' 
-        : 'w-full bg-white border-t border-gray-100 shadow-2xl'
-      }
-    `}>
-
+    <div className="bg-white min-h-screen">
       <div className={`${isOverlayActive ? 'w-full' : 'max-w-7xl mx-auto py-10 px-6'}`}>
 
-        {/* Tabs */}
+        {/* Tabs – hide when overlay active */}
         {!isOverlayActive && (
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {planData?.categories?.map((cat) => (

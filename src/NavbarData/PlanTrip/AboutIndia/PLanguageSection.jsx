@@ -6,22 +6,24 @@ const PLanguageSection = ({ onNavigateBack }) => {
   const { hero, regions } = pLanguageData;
   const navigate = useNavigate();
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="fixed inset-0 z-[100] bg-white w-screen h-screen overflow-y-auto overflow-x-hidden">
-      {/* BREADCRUMB OVERLAY - Positioned at top of Hero */}
-      <div className="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
-        <div className="max-w-7xl mx-auto py-5 px-10 flex items-center gap-2 text-[14px] text-white font-medium">
-          <button onClick={() => navigate('/')} className="hover:underline opacity-80">Home</button>
-          <span className="opacity-40">{">"}</span>
-          <button onClick={onNavigateBack} className="hover:underline opacity-80">Plan your trip</button>
-          <span className="opacity-40">{">"}</span>
-          <span className="font-bold tracking-wide">People & Language</span>
-        </div>
+
+      {/* BREADCRUMB: Home > About India > People & Language */}
+      <div className="w-full bg-[#3BB0C1] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-semibold sticky top-0 z-50 shadow-md">
+        <button onClick={() => navigate('/')} className="hover:opacity-75 transition-opacity">
+          Home
+        </button>
+        <span className="opacity-50">&gt;</span>
+        <button onClick={onNavigateBack} className="hover:opacity-75 transition-opacity">
+          About India
+        </button>
+        <span className="opacity-50">&gt;</span>
+        <span className="opacity-90">People & Language</span>
       </div>
 
       {/* HERO SECTION */}
@@ -50,7 +52,6 @@ const PLanguageSection = ({ onNavigateBack }) => {
                 key={region.id} 
                 className={`flex flex-col lg:flex-row gap-20 items-start ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
               >
-                {/* Visual Side */}
                 <div className="lg:w-1/2 w-full group relative">
                   <div className="overflow-hidden shadow-2xl rounded-sm">
                     <img 
@@ -59,18 +60,14 @@ const PLanguageSection = ({ onNavigateBack }) => {
                       alt={region.title} 
                     />
                   </div>
-                  {/* Floating Number Decor */}
                   <div className="absolute -top-6 -right-6 text-[100px] font-serif font-bold text-gray-100 -z-10 select-none">
                     0{idx + 1}
                   </div>
                 </div>
-
-                {/* Content Side */}
                 <div className="lg:w-1/2 space-y-8">
                   <h3 className="text-5xl font-serif font-bold text-gray-900 border-b-4 border-[#3BB0C1] inline-block pb-2">
                     {region.title}
                   </h3>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div>
                       <h4 className="text-[#3BB0C1] font-black text-[11px] tracking-[0.25em] uppercase mb-3">Demographics</h4>
@@ -81,14 +78,10 @@ const PLanguageSection = ({ onNavigateBack }) => {
                       <p className="text-gray-800 font-semibold leading-relaxed">{region.languages}</p>
                     </div>
                   </div>
-
                   <div className="pt-4">
                     <h4 className="text-gray-400 font-black text-[11px] tracking-[0.25em] uppercase mb-3">Culture & Heritage</h4>
-                    <p className="text-gray-600 leading-relaxed text-lg">
-                      {region.culture}
-                    </p>
+                    <p className="text-gray-600 leading-relaxed text-lg">{region.culture}</p>
                   </div>
-
                   <div className="bg-gray-50 p-8 border-l-4 border-[#3BB0C1] italic text-gray-500">
                     "{region.content}"
                   </div>
@@ -97,7 +90,6 @@ const PLanguageSection = ({ onNavigateBack }) => {
             ))}
           </div>
 
-          {/* FINAL BACK ACTION */}
           <div className="mt-40 text-center">
             <button 
               onClick={onNavigateBack}

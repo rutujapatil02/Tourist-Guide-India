@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { SkydivingData } from '../../../Data/ThingsToDo/Adventure/SkydivingData'; 
 import { 
   FaFacebookF, FaInstagram, FaYoutube, FaPinterestP, 
-  FaChevronDown, FaChevronLeft, FaChevronRight 
+  FaChevronDown, FaChevronLeft, FaChevronRight, FaHome
 } from "react-icons/fa";
 import { HiOutlineArrowUp } from "react-icons/hi";
 
@@ -10,7 +10,11 @@ import { HiOutlineArrowUp } from "react-icons/hi";
 import BluePeacock from "../../../assets/images/BluePeacock.png";
 import foot from "../../../assets/images/foot.png";
 
-const SkydivingSection = ({ onBack }) => {
+const SkydivingSection = ({ 
+  onBack,                    // required: back to Adventure main grid
+  onBackToThingsToDo,        // optional: back to Things to Do main
+  onGoHome                   // optional: go to homepage
+}) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [region, setRegion] = useState("India (English)");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,166 +34,256 @@ const SkydivingSection = ({ onBack }) => {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // --- DETAIL VIEW (Next Page Information) ---
+  // Navigation handlers
+  const handleHome = () => {
+    if (onGoHome) onGoHome();
+    else window.location.href = '/';
+  };
+
+  const handleThingsToDo = () => {
+    if (onBackToThingsToDo) onBackToThingsToDo();
+    else if (onBack) onBack();
+    else window.history.back();
+  };
+
+  const handleAdventure = () => {
+    if (onBack) onBack();
+    else window.history.back();
+  };
+
+  // --- Breadcrumb Component ---
+  const Breadcrumb = ({ currentPage }) => (
+    <div className="w-full bg-gradient-to-r from-[#3BB0C1] to-[#48abbc] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-medium sticky top-0 z-50 shadow-lg">
+      <button onClick={handleHome} className="flex items-center gap-1 hover:text-gray-200 transition-colors">
+        <FaHome className="w-4 h-4" />
+        <span>Home</span>
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      <button onClick={handleThingsToDo} className="hover:text-gray-200 transition-colors">
+        Things to Do
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      <button onClick={handleAdventure} className="hover:text-gray-200 transition-colors">
+        Adventure
+      </button>
+      <span className="text-white/60 text-xs">›</span>
+      {currentPage ? (
+        <>
+          <span className="hover:text-gray-200 transition-colors">Skydiving</span>
+          <span className="text-white/60 text-xs">›</span>
+          <span className="opacity-95 font-semibold truncate">{currentPage}</span>
+        </>
+      ) : (
+        <span className="opacity-95 font-semibold">Skydiving</span>
+      )}
+    </div>
+  );
+
+  // --- DETAIL VIEW (when a location is clicked) ---
   if (selectedItem) {
     return (
       <div className="bg-white min-h-screen animate-in fade-in duration-500">
-        <header className="bg-[#41abbc] py-4 px-8 text-white flex justify-between items-center sticky top-0 z-50 shadow-lg">
-          <button onClick={() => setSelectedItem(null)} className="text-xs font-bold tracking-widest uppercase border border-white/30 px-4 py-2 rounded-full hover:bg-white hover:text-[#41abbc] transition-all">
-            ← Back to Experiences
+        <Breadcrumb currentPage={selectedItem.title} />
+        <div className="max-w-6xl mx-auto py-12 px-6">
+          <button 
+            onClick={() => setSelectedItem(null)} 
+            className="flex items-center gap-2 text-[#48abbc] font-bold mb-8 hover:gap-3 transition-all group"
+          >
+            <FaChevronLeft className="group-hover:-translate-x-1 transition-transform" />
+            <span className="text-sm uppercase tracking-wider">Back to Experiences</span>
           </button>
-          <span className="text-xs font-bold uppercase tracking-widest">{selectedItem.title}</span>
-        </header>
-        <main className="max-w-6xl mx-auto py-24 px-6">
-          <div className="flex flex-col md:flex-row gap-16 items-start">
-            <img src={selectedItem.img} className="w-full md:w-1/2 h-[600px] object-cover rounded-[3rem] shadow-2xl" alt="Skydiving" />
-            <div className="flex-1 pt-10">
-              <p className="text-[#41abbc] font-black tracking-[0.3em] uppercase mb-4">{selectedItem.location}</p>
-              <h1 className="text-7xl font-serif mb-10 leading-tight">{selectedItem.title}</h1>
-              <p className="text-2xl text-gray-600 font-light leading-relaxed mb-8">{selectedItem.description}</p>
-              <div className="flex gap-4">
-                {selectedItem.tags.map(tag => (
-                   <span key={tag} className="px-6 py-2 border border-gray-200 rounded-full text-xs font-bold uppercase tracking-widest text-gray-400">{tag}</span>
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-2xl">
+              <img src={selectedItem.img} className="w-full h-[450px] lg:h-[550px] object-cover" alt={selectedItem.title} />
+            </div>
+            <div className="flex-1 pt-6">
+              <p className="text-[#48abbc] font-black tracking-[0.3em] uppercase text-xs mb-4">{selectedItem.location}</p>
+              <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">{selectedItem.title}</h1>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">{selectedItem.description}</p>
+              <div className="flex flex-wrap gap-3">
+                {selectedItem.tags?.map(tag => (
+                  <span key={tag} className="px-4 py-2 bg-gray-100 rounded-full text-xs font-bold uppercase tracking-wider text-gray-500">
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     );
   }
 
+  // --- MAIN VIEW (Skydiving landing) ---
   return (
-    <div className="bg-white min-h-screen font-sans">
-      {/* 1. HERO */}
-      <section className="relative h-[75vh] w-full overflow-hidden">
+    <div className="bg-white min-h-screen">
+      <Breadcrumb />
+
+      {/* Hero Section */}
+      <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
         <img src={SkydivingData.hero.bannerImg} className="w-full h-full object-cover" alt="Hero" />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center text-center text-white px-4">
-          <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-9xl font-serif mb-6 italic">{SkydivingData.hero.title}</h1>
-            <p className="text-xl md:text-2xl font-light opacity-90">{SkydivingData.hero.subtitle}</p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent flex items-center justify-center text-center text-white px-4">
+          <div className="max-w-4xl animate-fade-in-up">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif mb-6 italic drop-shadow-2xl">
+              {SkydivingData.hero.title}
+            </h1>
+            <div className="w-24 h-1 bg-[#FFC107] mx-auto mb-6 rounded-full"></div>
+            <p className="text-lg md:text-2xl font-light opacity-90 max-w-2xl mx-auto">
+              {SkydivingData.hero.subtitle}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 2. HORIZONTAL SLIDER WITH ARROWS */}
-      <section className="py-32 px-10 bg-[#f9f9f9]">
-        <div className="max-w-[1440px] mx-auto">
-          <div className="flex justify-between items-end mb-16">
-            <h2 className="text-6xl font-serif italic text-gray-900 border-l-8 border-[#41abbc] pl-8">Explore Activities</h2>
-            <div className="flex gap-6">
-              <button onClick={() => scroll('left')} className="w-16 h-16 border-2 border-gray-200 rounded-full flex items-center justify-center hover:bg-[#FFC107] hover:border-[#FFC107] transition-all shadow-md">
-                <FaChevronLeft className="text-xl" />
+      {/* Horizontal Slider with Arrows */}
+      <section className="py-20 px-6 md:py-28 md:px-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-between items-end mb-12 gap-4">
+            <h2 className="text-3xl md:text-5xl font-serif text-gray-900 border-l-8 border-[#48abbc] pl-6">
+              Explore Activities
+            </h2>
+            <div className="flex gap-4">
+              <button onClick={() => scroll('left')} className="w-12 h-12 md:w-14 md:h-14 border-2 border-gray-300 rounded-full flex items-center justify-center hover:bg-[#FFC107] hover:border-[#FFC107] transition-all shadow-md">
+                <FaChevronLeft className="text-lg" />
               </button>
-              <button onClick={() => scroll('right')} className="w-16 h-16 border-2 border-gray-200 rounded-full flex items-center justify-center hover:bg-[#FFC107] hover:border-[#FFC107] transition-all shadow-md">
-                <FaChevronRight className="text-xl" />
+              <button onClick={() => scroll('right')} className="w-12 h-12 md:w-14 md:h-14 border-2 border-gray-300 rounded-full flex items-center justify-center hover:bg-[#FFC107] hover:border-[#FFC107] transition-all shadow-md">
+                <FaChevronRight className="text-lg" />
               </button>
             </div>
           </div>
 
-          <div ref={scrollRef} className="flex gap-10 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-10">
+          <div ref={scrollRef} className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-8">
             {SkydivingData.records.map((item) => (
-              <div key={item.id} onClick={() => setSelectedItem(item)} className="min-w-[450px] group cursor-pointer snap-start">
-                <div className="h-[320px] rounded-[2.5rem] overflow-hidden mb-8 shadow-xl relative">
-                  <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="card" />
-                  <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">ADVENTURE</div>
+              <div 
+                key={item.id} 
+                onClick={() => setSelectedItem(item)} 
+                className="min-w-[280px] md:min-w-[380px] group cursor-pointer snap-start transition-transform hover:-translate-y-2 duration-300"
+              >
+                <div className="h-[280px] md:h-[320px] rounded-2xl md:rounded-3xl overflow-hidden shadow-lg relative">
+                  <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="card" />
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                    ADVENTURE
+                  </div>
                 </div>
-                <h3 className="text-3xl font-serif text-gray-900 group-hover:text-[#41abbc] transition-colors mb-2">{item.title}</h3>
-                <p className="text-[#41abbc] text-xs font-black uppercase tracking-[0.2em]">{item.location}</p>
+                <h3 className="text-xl md:text-2xl font-serif text-gray-800 group-hover:text-[#48abbc] transition-colors mt-4 mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-[#48abbc] text-[11px] font-black uppercase tracking-wider">{item.location}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. TRAVELLERS' STORIES (Large Blocks) */}
-      <section className="py-32 px-10 bg-white">
-        <h2 className="text-6xl font-serif mb-16 text-center italic">Travellers' Stories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1440px] mx-auto h-[700px]">
-           <div className="md:col-span-2 relative rounded-[3rem] overflow-hidden shadow-2xl group cursor-pointer">
-              <img src={SkydivingData.stories[0].img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" alt="Story" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-10 left-10 text-white">
-                <p className="text-xs font-bold tracking-widest uppercase mb-2">Pondicherry</p>
-                <h4 className="text-3xl font-serif">"The best tandem jump of my life!"</h4>
+      {/* Travellers' Stories */}
+      <section className="py-20 px-6 md:py-28 md:px-10 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-serif mb-12 text-center italic">Travellers' Stories</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-auto lg:h-[600px]">
+            {/* Featured story (large left block) */}
+            <div className="lg:col-span-2 relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl group cursor-pointer h-[300px] lg:h-full">
+              <img src={SkydivingData.stories[0].img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Story" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <p className="text-xs font-bold tracking-wider uppercase mb-1">Pondicherry</p>
+                <h4 className="text-xl md:text-2xl font-serif">"The best tandem jump of my life!"</h4>
               </div>
-           </div>
-           <div className="md:col-span-2 grid grid-rows-2 gap-8">
-              <div className="grid grid-cols-2 gap-8">
-                <img src={SkydivingData.stories[1].img} className="w-full h-full object-cover rounded-[2rem] shadow-lg" alt="S1" />
-                <img src={SkydivingData.stories[2].img} className="w-full h-full object-cover rounded-[2rem] shadow-lg" alt="S2" />
+            </div>
+            
+            {/* Right column with 2 small images + hashtag box */}
+            <div className="lg:col-span-2 grid grid-rows-2 gap-6">
+              <div className="grid grid-cols-2 gap-6 h-full">
+                <div className="rounded-2xl overflow-hidden shadow-md">
+                  <img src={SkydivingData.stories[1].img} className="w-full h-full object-cover" alt="S1" />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-md">
+                  <img src={SkydivingData.stories[2].img} className="w-full h-full object-cover" alt="S2" />
+                </div>
               </div>
-              <div className="bg-[#41abbc]/10 rounded-[2rem] flex items-center justify-center p-12 text-center border-4 border-dashed border-[#41abbc]/20">
-                <p className="text-2xl font-serif italic text-gray-600">Share your adrenaline moments with <br/><span className="text-[#41abbc] font-bold not-italic">#JumpIndia</span></p>
+              <div className="bg-[#48abbc]/10 rounded-2xl flex items-center justify-center p-8 text-center border-2 border-dashed border-[#48abbc]/30 h-full">
+                <p className="text-base md:text-xl font-serif italic text-gray-700">
+                  Share your adrenaline moments with <br/>
+                  <span className="text-[#48abbc] font-bold not-italic text-lg">#JumpIndia</span>
+                </p>
               </div>
-           </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 4. PROFESSIONAL FOOTER */}
+      {/* Professional Footer */}
       <footer className="relative text-white pt-24 pb-12 overflow-visible" style={{ backgroundColor: "#3AA8C1" }}>
-        <button onClick={scrollToTop} className="absolute -top-10 right-10 md:right-24 bg-[#FFC107] p-6 rounded-full shadow-2xl hover:bg-[#ffb300] transition-all z-20 group">
-          <HiOutlineArrowUp className="text-black text-3xl group-hover:scale-125 transition-transform" />
+        <button onClick={scrollToTop} className="absolute -top-10 right-6 md:right-12 bg-[#FFC107] p-5 rounded-full shadow-2xl hover:bg-[#ffb300] transition-all z-20 group">
+          <HiOutlineArrowUp className="text-black text-2xl group-hover:scale-110 transition-transform" />
         </button>
 
-        <div className="max-w-[1440px] mx-auto px-10">
-          <div className="flex flex-col items-center mb-20 border-b border-white/10 pb-12">
-            <div className="flex items-center gap-6">
-              <span className="text-4xl font-bold tracking-tighter uppercase">Incredible India</span>
-              <img src={BluePeacock} alt="Logo" className="h-20 w-auto brightness-0 invert" />
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="flex flex-col items-center mb-16 border-b border-white/10 pb-10">
+            <div className="flex items-center gap-4">
+              <span className="text-2xl md:text-3xl font-bold tracking-tighter uppercase">Incredible India</span>
+              <img src={BluePeacock} alt="Logo" className="h-14 w-auto brightness-0 invert" />
             </div>
           </div>
 
-          <div className="mb-24 bg-white/5 p-12 rounded-[3rem] border border-white/10 flex flex-col md:flex-row items-center gap-16">
-            <img src={foot} alt="Icon" className="w-32 opacity-80" />
+          <div className="mb-20 bg-white/5 p-8 md:p-10 rounded-2xl border border-white/10 flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+            <img src={foot} alt="Icon" className="w-24 opacity-80" />
             <div>
-              <h2 className="text-2xl font-bold mb-4">Acknowledgement of Heritage</h2>
-              <p className="text-xl font-light opacity-80 leading-relaxed">
+              <h2 className="text-xl md:text-2xl font-bold mb-3">Acknowledgement of Heritage</h2>
+              <p className="text-base font-light opacity-80 leading-relaxed">
                 We celebrate the diverse cultures and ancient wisdom of the Indian subcontinent, 
                 recognizing over 5,000 years of civilization and custodianship of this sacred land.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
-            {/* Change Region */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            {/* Region */}
             <div>
-               <h3 className="text-xs font-black uppercase mb-8 tracking-widest text-[#FFC107]">Region</h3>
-               <div className="border border-white/20 p-4 rounded-xl flex justify-between items-center cursor-pointer hover:bg-white/10 transition-all" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-                 <span>{region}</span>
-                 <FaChevronDown />
-               </div>
+              <h3 className="text-xs font-black uppercase mb-6 tracking-wider text-[#FFC107]">Region</h3>
+              <div className="border border-white/20 p-3 rounded-xl flex justify-between items-center cursor-pointer hover:bg-white/10 transition" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                <span className="text-sm">{region}</span>
+                <FaChevronDown size={12} />
+              </div>
+              {isDropdownOpen && (
+                <div className="absolute bg-white text-gray-800 rounded-lg mt-2 shadow-lg z-10 w-48">
+                  {countries.map(c => (
+                    <div key={c} className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm" onClick={() => { setRegion(c); setIsDropdownOpen(false); }}>
+                      {c}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             {/* Socials */}
             <div>
-               <h3 className="text-xs font-black uppercase mb-8 tracking-widest text-[#FFC107]">Follow Us</h3>
-               <div className="flex flex-col gap-4">
-                 <a href="#" className="flex items-center gap-3 hover:text-orange-300 transition-colors"><FaFacebookF /> Facebook</a>
-                 <a href="#" className="flex items-center gap-3 hover:text-orange-300 transition-colors"><FaInstagram /> Instagram</a>
-                 <a href="#" className="flex items-center gap-3 hover:text-orange-300 transition-colors"><FaYoutube /> YouTube</a>
-               </div>
+              <h3 className="text-xs font-black uppercase mb-6 tracking-wider text-[#FFC107]">Follow Us</h3>
+              <div className="flex flex-col gap-3">
+                <a href="#" className="flex items-center gap-3 text-sm hover:text-[#FFC107] transition"><FaFacebookF /> Facebook</a>
+                <a href="#" className="flex items-center gap-3 text-sm hover:text-[#FFC107] transition"><FaInstagram /> Instagram</a>
+                <a href="#" className="flex items-center gap-3 text-sm hover:text-[#FFC107] transition"><FaYoutube /> YouTube</a>
+              </div>
             </div>
-            {/* Links */}
+            {/* Explore Links */}
             <div>
-               <h3 className="text-xs font-black uppercase mb-8 tracking-widest text-[#FFC107]">Explore</h3>
-               <ul className="space-y-4 opacity-80">
-                 <li>Sitemap</li>
-                 <li>Privacy Policy</li>
-                 <li>Terms of Use</li>
-               </ul>
+              <h3 className="text-xs font-black uppercase mb-6 tracking-wider text-[#FFC107]">Explore</h3>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li className="hover:opacity-100 cursor-pointer">Sitemap</li>
+                <li className="hover:opacity-100 cursor-pointer">Privacy Policy</li>
+                <li className="hover:opacity-100 cursor-pointer">Terms of Use</li>
+              </ul>
             </div>
             {/* Corporate */}
             <div>
-               <h3 className="text-xs font-black uppercase mb-8 tracking-widest text-[#FFC107]">Corporate</h3>
-               <ul className="space-y-4 opacity-80">
-                 <li>Media Center</li>
-                 <li>Tourism Investment</li>
-                 <li>Contact</li>
-               </ul>
+              <h3 className="text-xs font-black uppercase mb-6 tracking-wider text-[#FFC107]">Corporate</h3>
+              <ul className="space-y-2 text-sm opacity-80">
+                <li className="hover:opacity-100 cursor-pointer">Media Center</li>
+                <li className="hover:opacity-100 cursor-pointer">Tourism Investment</li>
+                <li className="hover:opacity-100 cursor-pointer">Contact</li>
+              </ul>
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-10 text-center opacity-50 text-sm">
+          <div className="border-t border-white/10 pt-8 text-center text-xs opacity-50">
             © Tourist Guide India 2026 | Government of India Tourism
           </div>
         </div>

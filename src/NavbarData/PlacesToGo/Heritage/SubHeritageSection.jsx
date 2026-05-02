@@ -1,6 +1,7 @@
 // src/Components/PlacesToGo/Heritage/SubHeritageSection.jsx
-
 import { useState, useRef } from "react";
+import MapComponent from "../../../pages/MapPage";
+import 'leaflet/dist/leaflet.css';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -427,17 +428,16 @@ export default function SubHeritageSection({ place, onNavigate }) {
       </div>
 
       {/* ══ CONTENT CARD ═════════════════════════════════════════════════════ */}
-      {/* CHANGES: borderRadius: 0 and max-width / margin for width control */}
       <div style={{
         background: "#fff",
-        borderRadius: 0, // Removed curve
+        borderRadius: 0,
         marginTop: -60,
         position: "relative",
         zIndex: 10,
         boxShadow: "0 -4px 24px rgba(0,0,0,0.10)",
         minHeight: "100vh",
-        maxWidth: "1280px", // Less than screen width
-        margin: "-60px auto 0", // Center the card
+        maxWidth: "1280px",
+        margin: "-60px auto 0",
       }}>
 
         {/* ══ STICKY NAV TABS ═════════════════════════════════════════════════ */}
@@ -485,19 +485,30 @@ export default function SubHeritageSection({ place, onNavigate }) {
               </p>
             </div>
 
-            <div style={{ width: 260, borderRadius: 14, overflow: "hidden", border: "1px solid #e5e5e5" }}>
-              <div style={{ height: 175, background: "#cfe3ec", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontWeight: 600 }}>{place.location}</span>
+            {/* Map Sidebar with interactive map */}
+            <div style={{ width: 260, borderRadius: 14, overflow: "hidden", border: "1px solid #e5e5e5", display: "flex", flexDirection: "column", height: 260 }}>
+              <div style={{ flex: 1, minHeight: 0, position: "relative" }}>
+                <MapComponent
+                  position={place.coordinates || [20.5937, 78.9629]}
+                  name={place.name}
+                  zoom={12}
+                />
               </div>
-              <div style={{ padding: "14px 16px" }}>
-                <button
-                  onMouseEnter={() => setMapHov(true)}
-                  onMouseLeave={() => setMapHov(false)}
-                  style={{ width: "100%", padding: "10px 0", border: "2px solid #111", borderRadius: 30, background: mapHov ? "#111" : "transparent", color: mapHov ? "#fff" : "#111", cursor: "pointer", fontWeight: 700, fontSize: 13, transition: "background 0.18s, color 0.18s" }}
-                >
-                  View full map
-                </button>
-              </div>
+              <button
+                onMouseEnter={() => setMapHov(true)}
+                onMouseLeave={() => setMapHov(false)}
+                onClick={() => window.open(`https://www.google.com/maps/place/${encodeURIComponent(place.name + ', ' + place.location)}`)}
+                style={{
+                  width: "100%", padding: "14px 0",
+                  border: "none", borderTop: "1px solid #e5e5e5",
+                  background: mapHov ? "#111" : "#fff",
+                  color: mapHov ? "#fff" : "#111",
+                  cursor: "pointer", fontWeight: 700, fontSize: 13,
+                  transition: "background 0.18s, color 0.18s"
+                }}
+              >
+                View full map ↗
+              </button>
             </div>
           </div>
         </div>

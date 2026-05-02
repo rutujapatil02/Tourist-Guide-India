@@ -1,11 +1,11 @@
-// src/Data/PlacesToGo/Heritage/HeritageData.jsx
-
+// src/Data/PlacesToGo/Heritage/HeritageData.js
 export const heritageData = [
   {
     id: 1,
     name: "Taj Mahal",
     image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&q=80",
     location: "Agra, Uttar Pradesh",
+    coordinates: [27.1751, 78.0421],
     heroImage: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80",
     description:
       "The Taj Mahal rises from the banks of the Yamuna river as one of the world's most iconic monuments. Built by Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, this UNESCO World Heritage Site is a timeless symbol of love — 500 years in the making.",
@@ -181,27 +181,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 2,
     name: "Hampi Ruins",
     image: "https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?w=600&q=80",
     location: "Vijayanagara, Karnataka",
+    coordinates: [15.3350, 76.4600],
     heroImage: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1400&q=80",
     description:
       "Hampi is a surreal landscape of ancient boulders, temples, and ruined palaces scattered across Karnataka's Deccan plateau. Once the capital of the Vijayanagara Empire — one of the greatest Hindu empires ever known — its stone chariot and monolithic sculptures will leave you breathless.",
@@ -337,27 +337,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 3,
     name: "Ajanta Caves",
     image: "https://images.unsplash.com/photo-1567952739622-4266aeef888f?w=600&q=80",
     location: "Aurangabad, Maharashtra",
+    coordinates: [20.5524, 75.7005],
     heroImage: "https://images.unsplash.com/photo-1580349406636-7f5d56c87e43?w=1400&q=80",
     description:
       "Carved into a horseshoe-shaped gorge above the Waghora river, the 30 rock-cut Buddhist cave temples of Ajanta contain the world's finest surviving ancient frescoes. These 2,000-year-old paintings — depicting the Jataka tales of the Buddha — are a testament to India's extraordinary artistic heritage.",
@@ -439,27 +439,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 4,
     name: "Khajuraho Temples",
     image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
     location: "Chhatarpur, Madhya Pradesh",
+    coordinates: [24.8527, 79.9221],
     heroImage: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=1400&q=80",
     description:
       "The Khajuraho Group of Monuments are India's most intricately carved temples, built by the Chandela dynasty between 950–1050 AD. Their extraordinary sculptures — including the famous erotic carvings — represent the full spectrum of human life and spiritual aspiration, earning UNESCO World Heritage status.",
@@ -541,27 +541,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 5,
     name: "Konark Sun Temple",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80",
     location: "Puri, Odisha",
+    coordinates: [19.8876, 86.0945],
     heroImage: "https://images.unsplash.com/photo-1591018653170-c3e45bda19e8?w=1400&q=80",
     description:
       "The Konark Sun Temple is a 13th-century masterpiece conceived as a colossal chariot of the sun god Surya, with 24 intricately carved stone wheels pulled by seven horses. This UNESCO World Heritage Site stands as the crowning achievement of Kalinga architecture, where every surface tells a story in stone.",
@@ -643,27 +643,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 6,
     name: "Amer Fort",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=600&q=80",
     location: "Jaipur, Rajasthan",
+    coordinates: [26.9859, 75.8513],
     heroImage: "https://images.unsplash.com/photo-1524230659092-07f99a4b0791?w=1400&q=80",
     description:
       "Perched dramatically on a rocky ridge above Maota Lake, Amber Fort is Rajasthan's most magnificent palace complex. Built by Raja Man Singh in 1592 using pale yellow and pink sandstone, its blend of Rajput and Mughal architecture creates one of India's most photogenic heritage sites.",
@@ -747,28 +747,28 @@ export const heritageData = [
         text: "Watching the sunset from Mehtab Bagh across the river gave me a completely different perspective of the Taj's perfect symmetry. It's less crowded and perfect for photography.",
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
-        {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+      {
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 7,
     name: "Qutub Minar",
     image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80",
     location: "Delhi",
+    coordinates: [28.5245, 77.1855],
     heroImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1400&q=80",
     description:
       "The Qutub Minar soars 73 metres above Delhi's southern plains — the world's tallest brick minaret and the first monument of Islamic architecture in India. Built in 1193 by Qutub-ud-din Aibak, its five tapering storeys are covered in intricate calligraphy and the complex contains the mysterious 1,600-year-old Iron Pillar that never rusts.",
@@ -850,27 +850,27 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
-
   {
     id: 8,
     name: "Mahabalipuram",
     image: "https://images.unsplash.com/photo-1609945072845-71f5ea52c11e?w=600&q=80",
     location: "Chengalpattu, Tamil Nadu",
+    coordinates: [12.6180, 80.1919],
     heroImage: "https://images.unsplash.com/photo-1609421218649-d94601e22f2c?w=1400&q=80",
     description:
       "Mahabalipuram's stunning 7th-8th century rock-cut temples and monuments cascade down to a beautiful beachfront on the Bay of Bengal. Carved by the Pallava dynasty, this UNESCO World Heritage Site includes the world's largest bas-relief (Arjuna's Penance), the iconic Shore Temple, and eight remarkable rathas hewn from single rocks.",
@@ -953,20 +953,19 @@ export const heritageData = [
         image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=600&q=80"
       },
       {
-  id: 4,
-  title: "Moonlit Magic",
-  author: "Rahul Verma",
-  text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
-  image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
-},
-{
-  id: 5,
-  title: "Sunrise Serenity",
-  author: "Ananya Sharma",
-  text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
-  image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
-}
-
+        id: 4,
+        title: "Moonlit Magic",
+        author: "Rahul Verma",
+        text: "Visiting the Taj Mahal during a full moon night was surreal. The marble glowed softly under the moonlight, creating a magical and peaceful atmosphere unlike the daytime crowds.",
+        image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Sunrise Serenity",
+        author: "Ananya Sharma",
+        text: "Arriving at sunrise was worth waking up early. The soft golden light reflecting on the white marble made the Taj Mahal look even more breathtaking and serene.",
+        image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+      }
     ],
   },
 ];

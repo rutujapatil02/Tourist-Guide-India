@@ -7,12 +7,9 @@ const GeographySection = ({ onNavigateBack }) => {
   const navigate = useNavigate();
 
   return (
-    /* Main container fixed to cover the screen and hide parent navbars */
     <div className="fixed inset-0 z-[100] bg-gray-100 w-screen h-screen overflow-y-auto font-sans overflow-x-hidden">
       
-      {/* ✅ REFINED BREADCRUMB NAVBAR 
-          Style: Home > Plan your trip > Page Title
-      */}
+      {/* BREADCRUMB: Home > About India > Geography and Landscapes */}
       <div className="w-full bg-[#3BB0C1] text-white py-3 px-6 md:px-10 flex items-center gap-3 text-[11px] tracking-widest uppercase font-bold sticky top-0 z-50 shadow-md">
         <button 
           onClick={() => navigate('/')} 
@@ -20,18 +17,14 @@ const GeographySection = ({ onNavigateBack }) => {
         >
           Home
         </button>
-
         <span className="opacity-50 text-[10px] font-normal">&gt;</span>
-
         <button 
           onClick={onNavigateBack} 
           className="hover:opacity-75 transition-opacity"
         >
-          Plan your trip
+          About India
         </button>
-
         <span className="opacity-50 text-[10px] font-normal">&gt;</span>
-
         <span className="opacity-90 truncate">
           {hero.title}
         </span>
@@ -44,7 +37,6 @@ const GeographySection = ({ onNavigateBack }) => {
           className="w-full h-full object-cover" 
           alt="Geography Background" 
         />
-        {/* Title overlay positioned at the bottom left */}
         <div className="absolute inset-0 bg-black/20 flex flex-col justify-end p-8 md:p-24 pb-44">
           <h1 className="text-white text-5xl md:text-8xl font-serif font-bold max-w-6xl leading-tight drop-shadow-2xl">
             {hero.title}
@@ -52,25 +44,22 @@ const GeographySection = ({ onNavigateBack }) => {
         </div>
       </div>
 
-      {/* ✅ OVERLAPPING CONTENT BOX */}
+      {/* OVERLAPPING CONTENT BOX */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="-mt-32 bg-white shadow-2xl p-8 md:p-20 mb-20 border-t-[10px] border-orange-600">
           
-          {/* Subtitle / Intro Section */}
           <div className="mb-24 border-b border-gray-100 pb-20">
             <p className="text-3xl md:text-5xl text-gray-900 leading-tight font-serif italic max-w-4xl">
               "{hero.subtitle}"
             </p>
           </div>
 
-          {/* Geography Sections: Alternating Image and Text */}
           <div className="space-y-40">
             {contentSections.map((section, index) => (
               <div 
                 key={index} 
                 className={`flex flex-col lg:flex-row items-center gap-16 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}
               >
-                {/* Image Side */}
                 <div className="w-full lg:w-3/5">
                   <div className="relative overflow-hidden shadow-xl aspect-video group">
                     <img 
@@ -80,8 +69,6 @@ const GeographySection = ({ onNavigateBack }) => {
                     />
                   </div>
                 </div>
-
-                {/* Text Side */}
                 <div className="w-full lg:w-2/5 space-y-6">
                   <div className="flex items-center gap-4">
                     <span className="text-6xl font-serif font-light text-gray-100">
@@ -100,7 +87,6 @@ const GeographySection = ({ onNavigateBack }) => {
             ))}
           </div>
 
-          {/* Footer Navigation Button */}
           <div className="mt-40 pt-12 border-t border-gray-100 text-center">
             <button 
               onClick={onNavigateBack}

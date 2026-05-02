@@ -3,7 +3,6 @@ import { historyCultureData } from '../../../Data/PlanTrip/AboutIndia/HistoryCul
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
-/* ================= IMAGE SLIDER ================= */
 const SharpMediaSlider = ({ images }) => {
   const [currentImg, setCurrentImg] = useState(0);
 
@@ -34,31 +33,24 @@ const SharpMediaSlider = ({ images }) => {
           </div>
         ))}
       </div>
-
-      {/* Arrows */}
       <button 
         onClick={prevSlide} 
         className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white p-3 opacity-0 group-hover:opacity-100 transition"
       >
         <FaChevronLeft size={16} />
       </button>
-
       <button 
         onClick={nextSlide} 
         className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white p-3 opacity-0 group-hover:opacity-100 transition"
       >
         <FaChevronRight size={16} />
       </button>
-
-      {/* Progress bar */}
       <div className="absolute bottom-0 left-0 w-full flex gap-[2px] z-20">
         {images.map((_, i) => (
           <div 
             key={i} 
             className="h-1 flex-1 transition-all" 
-            style={{
-              backgroundColor: i === currentImg ? "white" : "rgba(255,255,255,0.3)"
-            }} 
+            style={{ backgroundColor: i === currentImg ? "white" : "rgba(255,255,255,0.3)" }} 
           />
         ))}
       </div>
@@ -66,7 +58,6 @@ const SharpMediaSlider = ({ images }) => {
   );
 };
 
-/* ================= MAIN COMPONENT ================= */
 const HistoryCultureSection = ({ onNavigateBack }) => {
   const { hero, points } = historyCultureData;
   const navigate = useNavigate();
@@ -74,31 +65,23 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
   return (
     <div className="fixed inset-0 z-[100] bg-gray-100 w-screen h-screen overflow-y-auto font-sans overflow-x-hidden">
       
-      {/* ✅ CLEAN BREADCRUMB */}
-      <div className="w-full bg-[#3BB0C1] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-semibold sticky top-0 z-50">
-        
+      {/* BREADCRUMB: Home > About India > History and Culture */}
+      <div className="w-full bg-[#3BB0C1] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-semibold sticky top-0 z-50 shadow-md">
         <span 
           onClick={() => navigate('/')} 
-          className="cursor-pointer hover:underline"
+          className="cursor-pointer hover:opacity-75 transition-opacity"
         >
           Home
         </span>
-
-        <span>&gt;</span>
-
+        <span className="opacity-50">&gt;</span>
         <span 
           onClick={onNavigateBack} 
-          className="cursor-pointer hover:underline"
+          className="cursor-pointer hover:opacity-75 transition-opacity"
         >
-          Plan your trip
+          About India
         </span>
-
-        <span>&gt;</span>
-
-        <span className="opacity-90">
-          {hero.title}
-        </span>
-
+        <span className="opacity-50">&gt;</span>
+        <span className="opacity-90">{hero.title}</span>
       </div>
 
       {/* HERO */}
@@ -119,14 +102,12 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="-mt-32 bg-white shadow-2xl p-8 md:p-16 mb-20 border-t-8 border-orange-600">
           
-          {/* Subtitle */}
           <div className="mb-24 border-b border-gray-100 pb-16">
             <p className="text-3xl md:text-5xl text-gray-900 leading-tight font-serif italic max-w-4xl">
               {hero.subtitle}
             </p>
           </div>
 
-          {/* Sections */}
           <div className="space-y-40">
             {points.map((item, index) => (
               <div 
@@ -138,7 +119,6 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
                 <div className="w-full lg:w-3/5">
                   <SharpMediaSlider images={item.images} />
                 </div>
-
                 <div className="w-full lg:w-2/5 pt-4">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="text-5xl font-serif text-orange-600">
@@ -146,11 +126,9 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
                     </span>
                     <div className="h-[1px] flex-grow bg-gray-200"></div>
                   </div>
-
                   <h3 className="text-3xl font-serif font-bold text-gray-900 mb-6">
                     {item.title}
                   </h3>
-
                   <p className="text-lg text-gray-600 leading-relaxed font-light">
                     {item.description}
                   </p>
@@ -159,7 +137,6 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
             ))}
           </div>
 
-          {/* Back Button */}
           <div className="mt-32 pt-10 border-t border-gray-100 text-center">
             <button 
               onClick={onNavigateBack}
@@ -168,7 +145,6 @@ const HistoryCultureSection = ({ onNavigateBack }) => {
               ← Back to Overview
             </button>
           </div>
-
         </div>
       </div>
     </div>

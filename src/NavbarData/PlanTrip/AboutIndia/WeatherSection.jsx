@@ -11,14 +11,27 @@ const WeatherSection = ({ onNavigateBack }) => {
 
   const convertToF = (c) => Math.round((c * 9) / 5 + 32);
 
-  // REUSABLE BREADCRUMB COMPONENT
+  // REUSABLE BREADCRUMB: Home > About India > [path]
   const Breadcrumb = ({ currentPath }) => (
-    <div className="w-full bg-[#3BB0C1] text-white py-2 px-6 flex items-center gap-2 text-[13px] font-medium sticky top-0 z-50">
-      <button onClick={() => navigate('/')} className="hover:underline">Home</button>
-      <span className="text-white/70">{">"}</span>
-      <button onClick={onNavigateBack} className="hover:underline">Plan your trip</button>
-      <span className="text-white/70">{">"}</span>
-      <span className="text-white capitalize">{currentPath}</span>
+    <div className="w-full bg-[#3BB0C1] text-white py-3 px-6 md:px-10 flex items-center gap-2 text-sm font-semibold sticky top-0 z-50 shadow-md">
+      <button onClick={() => navigate('/')} className="hover:opacity-75 transition-opacity">Home</button>
+      <span className="opacity-50">&gt;</span>
+      <button onClick={onNavigateBack} className="hover:opacity-75 transition-opacity">About India</button>
+      <span className="opacity-50">&gt;</span>
+      {activeSeason ? (
+        <>
+          <button 
+            onClick={() => setActiveSeason(null)} 
+            className="hover:opacity-75 transition-opacity"
+          >
+            Weather & Seasons
+          </button>
+          <span className="opacity-50">&gt;</span>
+          <span className="opacity-90 capitalize">{currentPath}</span>
+        </>
+      ) : (
+        <span className="opacity-90 capitalize">{currentPath}</span>
+      )}
     </div>
   );
 
@@ -28,7 +41,7 @@ const WeatherSection = ({ onNavigateBack }) => {
       <div className="fixed inset-0 z-[110] bg-white w-screen h-screen overflow-y-auto">
         <Breadcrumb currentPath={activeSeason.id.toLowerCase().replace('_', ' ')} />
         
-        <div className="relative h-[80vh]"> {/* Adjusted height to be more standard like the reference */}
+        <div className="relative h-[80vh]">
           <img src={activeSeason.image} className="w-full h-full object-cover" alt="" />
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <h1 className="text-white text-7xl font-serif font-bold uppercase tracking-tight">{activeSeason.id}</h1>
@@ -53,8 +66,7 @@ const WeatherSection = ({ onNavigateBack }) => {
   // VIEW 2: Main Weather List & Table
   return (
     <div className="fixed inset-0 z-[100] bg-white w-screen h-screen overflow-y-auto overflow-x-hidden">
-      {/* UPDATED BREADCRUMB */}
-      <Breadcrumb currentPath="Weather and seasons" />
+      <Breadcrumb currentPath="Weather & Seasons" />
 
       {/* HERO */}
       <div className="relative h-[90vh]"> 

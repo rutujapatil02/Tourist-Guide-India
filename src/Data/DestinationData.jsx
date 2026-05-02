@@ -15,6 +15,7 @@ export const destinationDetails = {
   tajmahal: {
     title: "Taj Mahal",
     location: "Agra, Uttar Pradesh",
+    coordinates: [27.1751, 78.0421],
     video: tajVideo,
     fullDesc: "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna. A UNESCO World Heritage site, it stands as the ultimate symbol of love and Mughal architectural brilliance, attracting millions of visitors with its perfect symmetry.",
     when: "October to March offers the most comfortable weather.",
@@ -43,22 +44,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-   nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Fatehpur Sikri", image: "https://t3.ftcdn.net/jpg/02/02/60/78/360_F_202607822_56X4UHztDCbXM1pUSdniwjKJIX51gkfb.jpg" },
       { id: 2, title: "Mathura", image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800" },
       { id: 3, title: "Agra Fort", image: "https://images.unsplash.com/photo-1544924129-b28074a5d7da?w=800" },
       { id: 4, title: "Vrindavan", image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "Golden Triangle: 3 days in Agra", image: "https://images.unsplash.com/photo-1548013146-72479768bbaa" },
-  { title: "Sunrise Photography & Heritage Tour", image: "https://images.unsplash.com/photo-1564507592333-c60657eea523" },
-  { title: "Mughal Architecture & History Walk", image: "https://images.unsplash.com/photo-1524492707947-28a0df2894b7" },
-  { title: "24 Hours in the City of Love", image: "https://images.unsplash.com/photo-1585135760591-23f463378374" }
-]
+      { title: "Golden Triangle: 3 days in Agra", image: "https://images.unsplash.com/photo-1548013146-72479768bbaa" },
+      { title: "Sunrise Photography & Heritage Tour", image: "https://images.unsplash.com/photo-1564507592333-c60657eea523" },
+      { title: "Mughal Architecture & History Walk", image: "https://images.unsplash.com/photo-1524492707947-28a0df2894b7" },
+      { title: "24 Hours in the City of Love", image: "https://images.unsplash.com/photo-1585135760591-23f463378374" }
+    ]
   },
   jaipur: {
     title: "Jaipur",
     location: "Rajasthan",
+    coordinates: [26.9124, 75.7873],
     video: jaipurVideo,
     fullDesc: "Known as the 'Pink City', Jaipur is a captivating blend of royal history and vibrant street life. From the intricate facade of Hawa Mahal to the grand hilltop Amer Fort, it offers a window into the opulent lifestyle of Rajasthan's Rajput rulers.",
     when: "November to February is the peak season.",
@@ -87,23 +89,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-   nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Pushkar", image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800" },
       { id: 2, title: "Ajmer", image: "https://images.unsplash.com/photo-1597511874400-98565a4c6a6d?w=800" },
       { id: 3, title: "Bhangarh Fort", image: "https://images.unsplash.com/photo-1509219270126-53966341f478?w=800" },
       { id: 4, title: "Abhaneri", image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "4 days in the Pink City", image: "https://images.unsplash.com/photo-1599661046289-e31897846e41" },
-  { title: "Royal Forts & Palaces Expedition", image: "https://images.unsplash.com/photo-1477587458883-47145ed94245" },
-  { title: "Rajasthani Art & Culture Trail", image: "https://images.unsplash.com/photo-1524230572899-a752b3835840" },
-  { title: "The Ultimate Rajasthan Road Trip", image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1" }
-]
-
+      { title: "4 days in the Pink City", image: "https://images.unsplash.com/photo-1599661046289-e31897846e41" },
+      { title: "Royal Forts & Palaces Expedition", image: "https://images.unsplash.com/photo-1477587458883-47145ed94245" },
+      { title: "Rajasthani Art & Culture Trail", image: "https://images.unsplash.com/photo-1524230572899-a752b3835840" },
+      { title: "The Ultimate Rajasthan Road Trip", image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1" }
+    ]
   },
   goa: {
     title: "Goa",
     location: "West Coast of India",
+    coordinates: [15.2993, 74.1240],
     video: goaVideo,
     fullDesc: "India's pocket-sized paradise, Goa is famous for its kaleidoscopic blend of Portuguese-Indian heritage, golden palm-fringed beaches, and a laid-back 'Susegad' vibe. It is a premier destination for both relaxation and high-energy nightlife.",
     thingsToDo: [
@@ -130,22 +132,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-   nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Dudhsagar Falls", image: "https://images.unsplash.com/photo-1613844838171-e649c7ed3e0d?w=800" },
       { id: 2, title: "Gokarna", image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800" },
       { id: 3, title: "Netravali Wildlife", image: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=800" },
       { id: 4, title: "Amboli Ghat", image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "4 days in North Goa Beaches", image: "https://images.unsplash.com/photo-1512753362246-760fa09ebdb3" },
-  { title: "Old Goa Heritage & Church Tour", image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3" },
-  { title: "South Goa: Peaceful Retreat", image: "https://images.unsplash.com/photo-1544735745-b89b7e3e488d" },
-  { title: "Party, Water Sports & Sunsets", image: "https://images.unsplash.com/photo-1603212613170-6da0833ed7f5" }
-]
+      { title: "4 days in North Goa Beaches", image: "https://images.unsplash.com/photo-1512753362246-760fa09ebdb3" },
+      { title: "Old Goa Heritage & Church Tour", image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3" },
+      { title: "South Goa: Peaceful Retreat", image: "https://images.unsplash.com/photo-1544735745-b89b7e3e488d" },
+      { title: "Party, Water Sports & Sunsets", image: "https://images.unsplash.com/photo-1603212613170-6da0833ed7f5" }
+    ]
   },
   kerala: {
     title: "Kerala",
     location: "South India",
+    coordinates: [10.8505, 76.2711],
     video: keralaVideo,
     fullDesc: "Rightly called 'God's Own Country', Kerala is a tropical symphony of emerald backwaters, spice-scented hill stations, and ancient Ayurvedic traditions. It offers a soul-soothing experience amidst dense greenery and serene coastal stretches.",
     thingsToDo: [
@@ -172,22 +175,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-  nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Munnar", image: "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=800" },
       { id: 2, title: "Alleppey", image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" },
       { id: 3, title: "Thekkady", image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800" },
       { id: 4, title: "Kanyakumari", image: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "7 days in God's Own Country", image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" },
-  { title: "Backwater Houseboat Experience", image: "https://images.unsplash.com/photo-1593693411515-c202e9742464" },
-  { title: "Munnar Tea Gardens Escape", image: "https://images.unsplash.com/photo-1593693397690-362cb9666ec2" },
-  { title: "Kerala Wellness & Ayurveda Tour", image: "https://images.unsplash.com/photo-1545208393-216559629b7b" }
-]
+      { title: "7 days in God's Own Country", image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" },
+      { title: "Backwater Houseboat Experience", image: "https://images.unsplash.com/photo-1593693411515-c202e9742464" },
+      { title: "Munnar Tea Gardens Escape", image: "https://images.unsplash.com/photo-1593693397690-362cb9666ec2" },
+      { title: "Kerala Wellness & Ayurveda Tour", image: "https://images.unsplash.com/photo-1545208393-216559629b7b" }
+    ]
   },
   ladakh: {
     title: "Ladakh",
     location: "Himalayan Region",
+    coordinates: [34.1526, 77.5771],
     video: ladakhVideo,
     fullDesc: "A high-altitude desert framed by jagged peaks, Ladakh is a land of dramatic landscapes and deep Tibetan Buddhist culture. It is a haven for adventure seekers and those looking for spiritual solitude in the Himalayas.",
     thingsToDo: [
@@ -214,22 +218,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-  nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Nubra Valley", image: "https://images.unsplash.com/photo-1581791534721-e599df4417f7?w=800" },
       { id: 2, title: "Pangong Lake", image: "https://images.unsplash.com/photo-1590005024862-6b67679a29fb?w=800" },
       { id: 3, title: "Kargil", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" },
       { id: 4, title: "Zanskar", image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "7 days in the Land of High Passes", image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2" },
-  { title: "The Ultimate Bike Trip to Leh", image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23" },
-  { title: "Monastery & Spirituality Tour", image: "https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba" },
-  { title: "Nubra Valley & Pangong Adventure", image: "https://images.unsplash.com/photo-1597033501655-66774e17815d" }
-]
+      { title: "7 days in the Land of High Passes", image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2" },
+      { title: "The Ultimate Bike Trip to Leh", image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23" },
+      { title: "Monastery & Spirituality Tour", image: "https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba" },
+      { title: "Nubra Valley & Pangong Adventure", image: "https://images.unsplash.com/photo-1597033501655-66774e17815d" }
+    ]
   },
   varanasi: {
     title: "Varanasi",
     location: "Uttar Pradesh",
+    coordinates: [25.3176, 82.9739],
     video: varanasiVideo,
     fullDesc: "One of the oldest continually inhabited cities in the world, Varanasi is the spiritual heart of India. It offers a profound cultural experience where ancient traditions, religion, and daily life converge on the banks of the sacred Ganges River.",
     thingsToDo: [
@@ -256,22 +261,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-  nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Sarnath", image: "https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=800" },
       { id: 2, title: "Prayagraj", image: "https://images.unsplash.com/photo-1545127398-14699f92334b?w=800" },
       { id: 3, title: "Vindhyachal", image: "https://images.unsplash.com/photo-1571053748382-141b7de59b88?w=800" },
       { id: 4, title: "Chunar Fort", image: "https://images.unsplash.com/photo-1601050690597-df056fb04791?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "3 days of Spiritual Awakening", image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc" },
-  { title: "Ganges Boat Tour & Evening Aarti", image: "https://images.unsplash.com/photo-1597080407783-99710364f9f7" },
-  { title: "Ancient Temples & Narrow Lanes", image: "https://images.unsplash.com/photo-1627894483216-2138af692e32" },
-  { title: "Kashi Heritage & Food Walk", image: "https://images.unsplash.com/photo-1605309605703-e69d9822a16d" }
-]
+      { title: "3 days of Spiritual Awakening", image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc" },
+      { title: "Ganges Boat Tour & Evening Aarti", image: "https://images.unsplash.com/photo-1597080407783-99710364f9f7" },
+      { title: "Ancient Temples & Narrow Lanes", image: "https://images.unsplash.com/photo-1627894483216-2138af692e32" },
+      { title: "Kashi Heritage & Food Walk", image: "https://images.unsplash.com/photo-1605309605703-e69d9822a16d" }
+    ]
   },
   udaipur: {
     title: "Udaipur",
     location: "Rajasthan",
+    coordinates: [24.5854, 73.7125],
     video: udaipurVideo,
     fullDesc: "Often referred to as the 'Venice of the East', Udaipur is defined by its shimmering lakes and the massive City Palace complex. The city's romantic architecture and boat-filled waters make it Rajasthan's most enchanting destination.",
     thingsToDo: [
@@ -298,7 +304,7 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-   nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Kumbhalgarh", image: "https://images.unsplash.com/photo-1621360841013-c7683c659ec6?w=800" },
       { id: 2, title: "Chittorgarh", image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800" },
       { id: 3, title: "Mount Abu", image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=800" },
@@ -308,6 +314,7 @@ export const destinationDetails = {
   rishikesh: {
     title: "Rishikesh",
     location: "Uttarakhand",
+    coordinates: [30.0869, 78.2676],
     video: rishikeshVideo,
     fullDesc: "Nestled in the foothills of the Himalayas, Rishikesh is known as the 'Yoga Capital of the World'. It is a unique hub where spiritual seekers and adventure enthusiasts meet on the banks of the emerald Ganges River.",
     thingsToDo: [
@@ -329,27 +336,28 @@ export const destinationDetails = {
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
-     { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
+      { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-   nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Haridwar", image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800" },
       { id: 2, title: "Mussoorie", image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800" },
       { id: 3, title: "Dehradun", image: "https://images.unsplash.com/photo-1601050690597-df056fb04791?w=800" },
       { id: 4, title: "Tehri Dam", image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "Yoga & Meditation Retreat", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" },
-  { title: "Ganga Rafting Adventure", image: "https://images.unsplash.com/photo-1530731141654-5993c3016c77" },
-  { title: "Spiritual Ghats & Laxman Jhula", image: "https://images.unsplash.com/photo-1598977123418-45455531d10e" },
-  { title: "Himalayan Foothills Trek", image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190" }
-]
+      { title: "Yoga & Meditation Retreat", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" },
+      { title: "Ganga Rafting Adventure", image: "https://images.unsplash.com/photo-1530731141654-5993c3016c77" },
+      { title: "Spiritual Ghats & Laxman Jhula", image: "https://images.unsplash.com/photo-1598977123418-45455531d10e" },
+      { title: "Himalayan Foothills Trek", image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190" }
+    ]
   },
   darjeeling: {
     title: "Darjeeling",
     location: "West Bengal",
+    coordinates: [27.0410, 88.2663],
     video: darjeelingVideo,
     fullDesc: "Perched in the Lesser Himalayas, Darjeeling is world-famous for its aromatic tea gardens and the majestic view of Mt. Kanchenjunga. Its nostalgic UNESCO Toy Train and colonial charm make it a quintessential Indian hill station.",
     thingsToDo: [
@@ -383,15 +391,16 @@ export const destinationDetails = {
       { id: 4, title: "Pelling", image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "3 days in the Queen of Hills", image: "https://images.unsplash.com/photo-1544281679-53571bc887bc" },
-  { title: "Toy Train & Tea Estate Tour", image: "https://images.unsplash.com/photo-1626241031267-850f368d901f" },
-  { title: "Sunrise at Tiger Hill", image: "https://images.unsplash.com/photo-1597843796321-230ff2379f2c" },
-  { title: "Sikkim & Darjeeling Loop", image: "https://images.unsplash.com/photo-1589136142558-9dec88424a1e" }
-]
+      { title: "3 days in the Queen of Hills", image: "https://images.unsplash.com/photo-1544281679-53571bc887bc" },
+      { title: "Toy Train & Tea Estate Tour", image: "https://images.unsplash.com/photo-1626241031267-850f368d901f" },
+      { title: "Sunrise at Tiger Hill", image: "https://images.unsplash.com/photo-1597843796321-230ff2379f2c" },
+      { title: "Sikkim & Darjeeling Loop", image: "https://images.unsplash.com/photo-1589136142558-9dec88424a1e" }
+    ]
   },
   andaman: {
     title: "Andaman",
     location: "Bay of Bengal",
+    coordinates: [11.7401, 92.6586],
     video: andamanVideo,
     fullDesc: "The Andaman Islands are an archipelago of turquoise waters and lush mangroves. From the haunting colonial history of the Cellular Jail to the pristine white sands of Radhanagar Beach, it is India’s premier tropical island escape.",
     thingsToDo: [
@@ -418,22 +427,23 @@ export const destinationDetails = {
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
-  nearPlaces: [
+    nearPlaces: [
       { id: 1, title: "Gangtok", image: "https://images.unsplash.com/photo-1590005024862-6b67679a29fb?w=800" },
       { id: 2, title: "Kalimpong", image: "https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800" },
       { id: 3, title: "Mirik", image: "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=800" },
       { id: 4, title: "Pelling", image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "5 days in Tropical Paradise", image: "https://images.unsplash.com/photo-1589197331516-4d836306915c" },
-  { title: "Havelock Island Scuba Diving", image: "https://images.unsplash.com/photo-1544551763-47a0159f9234" },
-  { title: "Cellular Jail & Port Blair History", image: "https://images.unsplash.com/photo-1625235881434-6c701777000c" },
-  { title: "Neil Island Beach Hopping", image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b" }
-]
+      { title: "5 days in Tropical Paradise", image: "https://images.unsplash.com/photo-1589197331516-4d836306915c" },
+      { title: "Havelock Island Scuba Diving", image: "https://images.unsplash.com/photo-1544551763-47a0159f9234" },
+      { title: "Cellular Jail & Port Blair History", image: "https://images.unsplash.com/photo-1625235881434-6c701777000c" },
+      { title: "Neil Island Beach Hopping", image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b" }
+    ]
   },
   mahabaleshwar: {
     title: "Mahabaleshwar",
     location: "Maharashtra",
+    coordinates: [17.9300, 73.6478],
     video: mahabaleshwarVideo,
     fullDesc: "Set in the Western Ghats, Mahabaleshwar is a vast plateau famous for its strawberry farms, misty peaks, and cascading waterfalls. It remains a favorite hilltop retreat for its pleasant year-round climate and stunning valley views.",
     thingsToDo: [
@@ -455,7 +465,7 @@ export const destinationDetails = {
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
-     { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
+      { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
@@ -467,10 +477,10 @@ export const destinationDetails = {
       { id: 4, title: "Tapola", image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" }
     ],
     tripsAndItineraries: [
-  { title: "Weekend Hill Station Getaway", image: "https://images.unsplash.com/photo-1599147500104-ff2044837a61" },
-  { title: "Strawberry Farm & Lake Tour", image: "https://images.unsplash.com/photo-1615485240388-121896796398" },
-  { title: "Western Ghats Monsoon Drive", image: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3" },
-  { title: "Panchgani & Pratapgad Trek", image: "https://images.unsplash.com/photo-1626435640237-775b0586e398" }
-]
+      { title: "Weekend Hill Station Getaway", image: "https://images.unsplash.com/photo-1599147500104-ff2044837a61" },
+      { title: "Strawberry Farm & Lake Tour", image: "https://images.unsplash.com/photo-1615485240388-121896796398" },
+      { title: "Western Ghats Monsoon Drive", image: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3" },
+      { title: "Panchgani & Pratapgad Trek", image: "https://images.unsplash.com/photo-1626435640237-775b0586e398" }
+    ]
   }
 };
