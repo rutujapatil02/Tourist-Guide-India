@@ -34,13 +34,13 @@ export const destinationDetails = {
     ],
     foodCategories: [
       { id: 1, title: "Best restaurants", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
-      { id: 2, title: "Best rooftop bars", image: "https://images.unsplash.com/photo-1551576407-06109968430b?w=800" },
+      { id: 2, title: "Best rooftop bars", image: "https://plus.unsplash.com/premium_photo-1661879028525-978a222c0cc8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2F0ZXJmcm9udCUyMGJhcnN8ZW58MHx8MHx8fDA%3D" },
       { id: 3, title: "Top coffee shops", image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" },
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
       { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
-      { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
+      { id: 2, title: "Weather in Varanasi", image: "https://media.istockphoto.com/id/1321422853/photo/wheather.webp?a=1&b=1&s=612x612&w=0&k=20&c=HDVDnNqhAC80InOl9zid6pni2MontfrwNjOKlcW9iR8=" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
     ],
@@ -51,10 +51,10 @@ export const destinationDetails = {
       { id: 4, title: "Vrindavan", image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800" }
     ],
     tripsAndItineraries: [
-      { title: "Golden Triangle: 3 days in Agra", image: "https://images.unsplash.com/photo-1548013146-72479768bbaa" },
+      { title: "Golden Triangle: 3 days in Agra", image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWdyYXxlbnwwfHwwfHx8MA%3D%3D" },
       { title: "Sunrise Photography & Heritage Tour", image: "https://images.unsplash.com/photo-1564507592333-c60657eea523" },
-      { title: "Mughal Architecture & History Walk", image: "https://images.unsplash.com/photo-1524492707947-28a0df2894b7" },
-      { title: "24 Hours in the City of Love", image: "https://images.unsplash.com/photo-1585135760591-23f463378374" }
+      { title: "Mughal Architecture & History Walk", image: "https://www.responsibletravel.com/ImagesClient/dtg-cr3897-rajasthan-humayuns-tomb.jpg" },
+      { title: "24 Hours in the City of Love", image: "https://img.freepik.com/premium-photo/stylized-cityscape-with-famous-landmarks-adorned-valentines-day-decor-generated-by-ai_950002-619539.jpg?semt=ais_hybrid&w=740&q=80" }
     ]
   },
   jaipur: {
@@ -139,10 +139,10 @@ export const destinationDetails = {
       { id: 4, title: "Amboli Ghat", image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800" }
     ],
     tripsAndItineraries: [
-      { title: "4 days in North Goa Beaches", image: "https://images.unsplash.com/photo-1512753362246-760fa09ebdb3" },
+      { title: "4 days in North Goa Beaches", image: "https://plus.unsplash.com/premium_photo-1697729594707-0fc9e51c8eed?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29hJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D" },
       { title: "Old Goa Heritage & Church Tour", image: "https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3" },
-      { title: "South Goa: Peaceful Retreat", image: "https://images.unsplash.com/photo-1544735745-b89b7e3e488d" },
-      { title: "Party, Water Sports & Sunsets", image: "https://images.unsplash.com/photo-1603212613170-6da0833ed7f5" }
+      { title: "South Goa: Peaceful Retreat", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoGEoq91avNnFZ4h5lifeeIBUXo0ngoU8cpQ&s" },
+      { title: "Party, Water Sports & Sunsets", image: "https://t3.ftcdn.net/jpg/04/05/79/12/360_F_405791238_jfKjgLri8AC0ihAfzJkbGYyyu7kd92Yj.jpg" }
     ]
   },
   kerala: {
@@ -173,7 +173,7 @@ export const destinationDetails = {
       { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
-      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
+      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1655272427422-498f985c8998?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG91cnN8ZW58MHx8MHx8fDA%3D" }
     ],
     nearPlaces: [
       { id: 1, title: "Munnar", image: "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=800" },
@@ -183,9 +183,9 @@ export const destinationDetails = {
     ],
     tripsAndItineraries: [
       { title: "7 days in God's Own Country", image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" },
-      { title: "Backwater Houseboat Experience", image: "https://images.unsplash.com/photo-1593693411515-c202e9742464" },
-      { title: "Munnar Tea Gardens Escape", image: "https://images.unsplash.com/photo-1593693397690-362cb9666ec2" },
-      { title: "Kerala Wellness & Ayurveda Tour", image: "https://images.unsplash.com/photo-1545208393-216559629b7b" }
+      { title: "Backwater Houseboat Experience", image: "https://media.istockphoto.com/id/1266651692/photo/houseboat-in-alappuzha-backwaters-kerala.jpg?s=612x612&w=0&k=20&c=G432lmdUz9qrW6D4sZYxLe6K-Km85OEmZg0qpcGyRCI=" },
+      { title: "Munnar Tea Gardens Escape", image: "https://media.istockphoto.com/id/1468862074/photo/mughal-garden-delhi-or-amrit-udyan-rashtrapati-bhawan-presidents-estate-new-delhi-delhi.jpg?s=612x612&w=0&k=20&c=GBch-8nynfQEispOkJ0qOubBqcXx1-eLVOfODvBER50=" },
+      { title: "Kerala Wellness & Ayurveda Tour", image: "data:image/jpeg;base64,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" }
     ]
   },
   ladakh: {
@@ -209,7 +209,7 @@ export const destinationDetails = {
     foodCategories: [
       { id: 1, title: "Best restaurants", image: "https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=800" },
       { id: 2, title: "Best high-altitude bars", image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" },
-      { id: 3, title: "Top coffee shops", image: "https://images.unsplash.com/photo-1534422298391-e4f8c170db0a?w=800" },
+      { id: 3, title: "Top coffee shops", image: "https://plus.unsplash.com/premium_photo-1663932464735-e0946d833749?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
@@ -228,7 +228,7 @@ export const destinationDetails = {
       { title: "7 days in the Land of High Passes", image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2" },
       { title: "The Ultimate Bike Trip to Leh", image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23" },
       { title: "Monastery & Spirituality Tour", image: "https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba" },
-      { title: "Nubra Valley & Pangong Adventure", image: "https://images.unsplash.com/photo-1597033501655-66774e17815d" }
+      { title: "Nubra Valley & Pangong Adventure", image: "https://images.unsplash.com/photo-1617159156637-dfb8655c9f95?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bnVicmElMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D" }
     ]
   },
   varanasi: {
@@ -251,12 +251,12 @@ export const destinationDetails = {
     ],
     foodCategories: [
       { id: 1, title: "Best restaurants", image: "https://images.unsplash.com/photo-1571053748382-141b7de59b88?w=800" },
-      { id: 2, title: "Best riverside cafes", image: "https://images.unsplash.com/photo-1601050690597-df056fb04791?w=800" },
+      { id: 2, title: "Best riverside cafes", image: "https://images.unsplash.com/photo-1759276858203-3de4d14f3546?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdhdGVyZnJvbnQlMjBiYXJzfGVufDB8fDB8fHww" },
       { id: 3, title: "Top coffee shops", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
-      { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
+      { id: 1, title: "Where to stay", image: "https://images.unsplash.com/photo-1775866914943-ba1415a35afc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVscyUyMGJpZ3xlbnwwfHwwfHx8MA%3D%3D" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
       { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
@@ -269,9 +269,9 @@ export const destinationDetails = {
     ],
     tripsAndItineraries: [
       { title: "3 days of Spiritual Awakening", image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc" },
-      { title: "Ganges Boat Tour & Evening Aarti", image: "https://images.unsplash.com/photo-1597080407783-99710364f9f7" },
+      { title: "Ganges Boat Tour & Evening Aarti", image: "https://images.unsplash.com/photo-1763046198598-fc3a0892261a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FuZ2VzJTIwYm9hdCUyMHRvdXJ8ZW58MHx8MHx8fDA%3D" },
       { title: "Ancient Temples & Narrow Lanes", image: "https://images.unsplash.com/photo-1627894483216-2138af692e32" },
-      { title: "Kashi Heritage & Food Walk", image: "https://images.unsplash.com/photo-1605309605703-e69d9822a16d" }
+      { title: "Kashi Heritage & Food Walk", image: "https://images.unsplash.com/photo-1646288744226-a2e3a06bfb10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2FzaGklMjBoZXJpdGFnZXxlbnwwfHwwfHx8MA%3D%3D" }
     ]
   },
   udaipur: {
@@ -350,7 +350,7 @@ export const destinationDetails = {
     tripsAndItineraries: [
       { title: "Yoga & Meditation Retreat", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b" },
       { title: "Ganga Rafting Adventure", image: "https://images.unsplash.com/photo-1530731141654-5993c3016c77" },
-      { title: "Spiritual Ghats & Laxman Jhula", image: "https://images.unsplash.com/photo-1598977123418-45455531d10e" },
+      { title: "Spiritual Ghats & Laxman Jhula", image: "https://images.unsplash.com/photo-1767278593942-b0116721291b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3ByaXR1YWwlMjBnaGF0c3xlbnwwfHwwfHx8MA%3D%3D" },
       { title: "Himalayan Foothills Trek", image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190" }
     ]
   },
@@ -382,7 +382,7 @@ export const destinationDetails = {
       { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
-      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
+      { id: 4, title: "Find tours", image: "https://plus.unsplash.com/premium_photo-1716999430033-82bfa6136013?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmluZCUyMHRvdXJzfGVufDB8fDB8fHww" }
     ],
     nearPlaces: [
       { id: 1, title: "Gangtok", image: "https://images.unsplash.com/photo-1590005024862-6b67679a29fb?w=800" },
@@ -391,10 +391,10 @@ export const destinationDetails = {
       { id: 4, title: "Pelling", image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" }
     ],
     tripsAndItineraries: [
-      { title: "3 days in the Queen of Hills", image: "https://images.unsplash.com/photo-1544281679-53571bc887bc" },
-      { title: "Toy Train & Tea Estate Tour", image: "https://images.unsplash.com/photo-1626241031267-850f368d901f" },
-      { title: "Sunrise at Tiger Hill", image: "https://images.unsplash.com/photo-1597843796321-230ff2379f2c" },
-      { title: "Sikkim & Darjeeling Loop", image: "https://images.unsplash.com/photo-1589136142558-9dec88424a1e" }
+      { title: "3 days in the Queen of Hills", image: "https://images.unsplash.com/photo-1700219799598-e9b55f4bee5c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVlZW4lMjBoaWxsc3xlbnwwfHwwfHx8MA%3D%3D" },
+      { title: "Toy Train & Tea Estate Tour", image: "https://images.unsplash.com/photo-1574707669373-7bce91803505?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG95JTIwdHJhaW58ZW58MHx8MHx8fDA%3D" },
+      { title: "Sunrise at Tiger Hill", image: "https://media.istockphoto.com/id/964432168/photo/a-dawn-at-tiger-hill-darjeeling.webp?a=1&b=1&s=612x612&w=0&k=20&c=UxsZkCiB1u1R8gGA8l2v96BEMJxODOKGuPz6vdP5Ok0=" },
+      { title: "Sikkim & Darjeeling Loop", image: "https://images.unsplash.com/photo-1652792595182-427510e8644f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2lra2ltJTIwYW5kJTIwZGFyamlsaW5nJTIwbG9vcHxlbnwwfHwwfHx8MA%3D%3D" }
     ]
   },
   andaman: {
@@ -417,7 +417,7 @@ export const destinationDetails = {
     ],
     foodCategories: [
       { id: 1, title: "Best seafood", image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800" },
-      { id: 2, title: "Best beach bars", image: "https://images.unsplash.com/photo-1550966841-3ee7adac166e?w=800" },
+      { id: 2, title: "Best beach bars", image: "https://images.unsplash.com/photo-1774808241419-0caf5164301c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdhdGVyZnJvbnQlMjBiYXJzfGVufDB8fDB8fHww" },
       { id: 3, title: "Top coffee shops", image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" },
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
@@ -425,7 +425,7 @@ export const destinationDetails = {
       { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
-      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
+      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1776111791183-c3286acf6de4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
     ],
     nearPlaces: [
       { id: 1, title: "Gangtok", image: "https://images.unsplash.com/photo-1590005024862-6b67679a29fb?w=800" },
@@ -434,9 +434,9 @@ export const destinationDetails = {
       { id: 4, title: "Pelling", image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" }
     ],
     tripsAndItineraries: [
-      { title: "5 days in Tropical Paradise", image: "https://images.unsplash.com/photo-1589197331516-4d836306915c" },
-      { title: "Havelock Island Scuba Diving", image: "https://images.unsplash.com/photo-1544551763-47a0159f9234" },
-      { title: "Cellular Jail & Port Blair History", image: "https://images.unsplash.com/photo-1625235881434-6c701777000c" },
+      { title: "5 days in Tropical Paradise", image: "https://media.istockphoto.com/id/172202869/photo/birds-2.webp?a=1&b=1&s=612x612&w=0&k=20&c=30FfvE0YVlEuqy3jWPo17ec6tCxK4TJLK4xMoSFknPI=" },
+      { title: "Havelock Island Scuba Diving", image: "https://media.istockphoto.com/id/2198545846/photo/girl-doing-scuba-adventurous-deep-sea-dive-with-dive-master-underwater-and-stingray-close-up.jpg?s=612x612&w=0&k=20&c=0ZpDrjZJXZhQv0wL6YyAqogLIJ9o8D0AuZkgzoWHJe0=" },
+      { title: "Cellular Jail & Port Blair History", image: "https://media.istockphoto.com/id/1481379847/photo/selective-focus-of-cellular-jail-which-is-also-known-as-kalapani-jail-or-andaman-jail-is-one.jpg?s=612x612&w=0&k=20&c=zCcJigstIk7c_WKZ_QMK7fpA_-DhnjWT2D2fiyWUU5w=" },
       { title: "Neil Island Beach Hopping", image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b" }
     ]
   },
@@ -465,10 +465,10 @@ export const destinationDetails = {
       {id: 4, title: "Local Favorites", image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800"}
     ],
     discoverCategories: [
-      { id: 1, title: "Where to stay", image: "https://thumbs.dreamstime.com/b/city-street-view-car-window-high-rise-buildings-mountain-background-high-quality-city-street-view-car-window-433329600.jpg" },
+      { id: 1, title: "Where to stay", image: "https://images.unsplash.com/photo-1700004060538-cb750e9a2992?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
       { id: 2, title: "Weather in Varanasi", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" },
       { id: 3, title: "Find a travel agent", image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800" },
-      { id: 4, title: "Find tours", image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=800" }
+      { id: 4, title: "Find tours", image: "https://plus.unsplash.com/premium_photo-1661670468082-a2c8c28122d7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZpbmQlMjB0b3Vyc3xlbnwwfHwwfHx8MA%3D%3D" }
     ],
     nearPlaces: [
       { id: 1, title: "Panchgani", image: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=800" },
@@ -477,10 +477,10 @@ export const destinationDetails = {
       { id: 4, title: "Tapola", image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" }
     ],
     tripsAndItineraries: [
-      { title: "Weekend Hill Station Getaway", image: "https://images.unsplash.com/photo-1599147500104-ff2044837a61" },
-      { title: "Strawberry Farm & Lake Tour", image: "https://images.unsplash.com/photo-1615485240388-121896796398" },
+      { title: "Weekend Hill Station Getaway", image: "https://media.istockphoto.com/id/1206473179/photo/mount-abu-hill-station-india.jpg?s=2048x2048&w=is&k=20&c=kD4LbbkMsZkXzdhQDsKfPEQKRyra9aRTD3yO1NljPBo=" },
+      { title: "Strawberry Farm & Lake Tour", image: "https://media.istockphoto.com/id/1318348032/photo/young-farmer-men-a-basket-filled-with-strawberries.jpg?s=2048x2048&w=is&k=20&c=AbyRyyjp5L7aGDWt-Oc9mDJYg7TENOKtotxnusxReEU=" },
       { title: "Western Ghats Monsoon Drive", image: "https://images.unsplash.com/photo-1506461883276-594a12b11cf3" },
-      { title: "Panchgani & Pratapgad Trek", image: "https://images.unsplash.com/photo-1626435640237-775b0586e398" }
+      { title: "Panchgani & Pratapgad Trek", image: "https://images.unsplash.com/photo-1707848392989-5455a08ee4df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJhdGFwZ2FkJTIwdHJla3xlbnwwfHwwfHx8MA%3D%3D" }
     ]
   }
 };

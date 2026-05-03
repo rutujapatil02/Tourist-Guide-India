@@ -7,7 +7,7 @@ export const tripsData = {
     {
       slug: "golden-triangle-3-days-in-agra",
       title: "Golden Triangle: 3 days in Agra",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bbaa",
+      image: "https://media.istockphoto.com/id/827043866/photo/fatehpur-sikri-city.jpg?s=612x612&w=0&k=20&c=yHA0K62z-cCXMkxB2CEshzcisVzmMILqIv-AStGIFso=",
       duration: "3 Days",
       bestTime: "October – March",
       groupSize: "2–10 people",
@@ -24,7 +24,7 @@ export const tripsData = {
             "Walk along the Yamuna riverside promenade",
             "Dinner at a rooftop restaurant with Taj views",
           ],
-          image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800",
+          image: "https://media.istockphoto.com/id/827043866/photo/fatehpur-sikri-city.jpg?s=612x612&w=0&k=20&c=yHA0K62z-cCXMkxB2CEshzcisVzmMILqIv-AStGIFso=",
         },
         {
           day: 2,
@@ -36,7 +36,7 @@ export const tripsData = {
             "Visit Itmad-ud-Daula (Baby Taj) in the afternoon",
             "Evening Kinari Bazaar shopping walk",
           ],
-          image: "https://media.istockphoto.com/id/1169495248/photo/agra-fort-medieval-indian-fort-at-agra-india-at-sunrise.jpg?s=612x612",
+          image: "https://media.istockphoto.com/id/889882554/photo/sunrise-over-village.jpg?s=612x612&w=0&k=20&c=fqVroVcEnSEIlalBIrBdmC3PLJanPIwtHTlhyEuvA_I=",
         },
         {
           day: 3,
@@ -105,7 +105,7 @@ export const tripsData = {
     {
       slug: "mughal-architecture-history-walk",
       title: "Mughal Architecture & History Walk",
-      image: "https://images.unsplash.com/photo-1524492707947-28a0df2894b7",
+      image: "https://media.istockphoto.com/id/2181281980/photo/india-new-delhi-mughal-emperor-humayun-tomb.jpg?s=612x612&w=0&k=20&c=GplpEJxqbX0E7iUGw243xBI5Yotl9G4Vemqt1XenHXo=",
       duration: "1 Day",
       bestTime: "October – March",
       groupSize: "2–15 people",
@@ -123,7 +123,7 @@ export const tripsData = {
             "Afternoon at the Taj Mahal with guided history session",
             "Fatehpur Sikri architecture overview (optional drive)",
           ],
-          image: "https://images.unsplash.com/photo-1548013146-72479768bbaa?w=800",
+          image: "https://media.istockphoto.com/id/2221550134/photo/people-walking-near-the-hawa-mahal-a-palace-in-the-city-of-jaipur-rajasthan-india-know-as-the.jpg?s=612x612&w=0&k=20&c=2eSBcmqV0lD_HGp5JAFKuubTHjV1_JdRAPIu6J1Sm-Y=",
         },
       ],
       highlights: [
@@ -469,7 +469,7 @@ export const tripsData = {
     {
       slug: "south-goa-peaceful-retreat",
       title: "South Goa: Peaceful Retreat",
-      image: "https://images.unsplash.com/photo-1544735745-b89b7e3e488d",
+      image: "https://media.istockphoto.com/id/157579910/photo/the-beach.jpg?s=612x612&w=0&k=20&c=aMk67AmzIVD_S1Nibww8ytUdyub2ck3HNQ3uTvuPWPI=",
       duration: "3 Days",
       bestTime: "November – March",
       groupSize: "2–8 people",
@@ -481,7 +481,7 @@ export const tripsData = {
           day: 1,
           title: "Palolem Beach & Sunset Cruise",
           activities: ["Arrive at Palolem Beach", "Kayaking in calm lagoon", "Dolphin-watching sunset cruise", "Seafood dinner on the beach"],
-          image: "https://images.unsplash.com/photo-1512753362246-760fa09ebdb3?w=800",
+          image: "https://media.istockphoto.com/id/516627008/photo/beautiful-cottages-at-goa-beach.jpg?s=612x612&w=0&k=20&c=2K4OuVKsrYj0FxFUYcR1CF6sgJf1fnkSWadaytlKDNk=",
         },
         {
           day: 2,
@@ -493,7 +493,7 @@ export const tripsData = {
           day: 3,
           title: "Agonda Beach & Departure",
           activities: ["Quiet morning at Agonda Beach", "Yoga session at beachside studio", "Lunch at a café", "Departure"],
-          image: "https://images.unsplash.com/photo-1544735745-b89b7e3e488d?w=800",
+          image: "https://media.istockphoto.com/id/1454927717/photo/scenic-view-of-cola-beach-in-goa.jpg?s=612x612&w=0&k=20&c=YLTrnyX6wnNCFVDFt3KA8bk50Zn1aczOKZugkZ2DzNk=",
         },
       ],
       highlights: ["Palolem Beach kayaking", "Dudhsagar Falls swim", "Dolphin-watching cruise", "Spice plantation tour"],
@@ -502,7 +502,7 @@ export const tripsData = {
     {
       slug: "party-water-sports-sunsets",
       title: "Party, Water Sports & Sunsets",
-      image: "https://images.unsplash.com/photo-1603212613170-6da0833ed7f5",
+      image: "https://media.istockphoto.com/id/2207222893/photo/nighttime-scene-of-goa-beachfront-with-illuminated-huts-and-lively-atmosphere.jpg?s=612x612&w=0&k=20&c=pyhb13C6ALEGmiLRN0TnmfMbUTiI4kkQU3Y9sveW6g0=",
       duration: "3 Days",
       bestTime: "December – January",
       groupSize: "4–15 people",
@@ -526,7 +526,7 @@ export const tripsData = {
           day: 3,
           title: "Sunset Cruise & Departure",
           activities: ["Morning at leisure", "Luxury sunset cruise with music and drinks", "Farewell seafood dinner", "Departure"],
-          image: "https://images.unsplash.com/photo-1603212613170-6da0833ed7f5?w=800",
+          image: "https://media.istockphoto.com/id/1468929933/photo/sunset-time-in-maldives-vertical-still.jpg?s=612x612&w=0&k=20&c=l3-yWxRBGrtmyhIUAwxhuOmyGsVCXqZyYeSX1t1wIZw=",
         },
       ],
       highlights: ["Scuba diving", "Casino cruise", "Tito's nightlife", "Luxury sunset cruise", "Anjuna beach club"],
@@ -560,7 +560,7 @@ export const tripsData = {
     {
       slug: "backwater-houseboat-experience",
       title: "Backwater Houseboat Experience",
-      image: "https://images.unsplash.com/photo-1593693411515-c202e9742464",
+      image: "https://plus.unsplash.com/premium_photo-1697729438401-fcb4ff66d9a8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QmFjayUyMEJhY2t3YXRlciUyMEhvdXNlYm9hdHxlbnwwfHwwfHx8MA%3D%3D",
       duration: "2 Days",
       bestTime: "September – February",
       groupSize: "2–6 people",
@@ -568,7 +568,7 @@ export const tripsData = {
       overview:
         "An intimate 2-day houseboat journey through Kerala's legendary network of canals, lakes, and lagoons — with fresh fish meals, village stopovers, and a night under the stars.",
       itinerary: [
-        { day: 1, title: "Board at Alleppey & Cruise", activities: ["Board houseboat at Alleppey jetty", "Cruise through Punnamada Lake", "Coir-making village visit", "Kerala sadya lunch on board", "Sunset cocktails on the deck"], image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" },
+        { day: 1, title: "Board at Alleppey & Cruise", activities: ["Board houseboat at Alleppey jetty", "Cruise through Punnamada Lake", "Coir-making village visit", "Kerala sadya lunch on board", "Sunset cocktails on the deck"], image: "https://media.istockphoto.com/id/1446195098/photo/young-nordic-woman-going-for-a-canoe-ride.jpg?s=612x612&w=0&k=20&c=2_173Y1F-OR8BOVRvQvrdf0aHTFi25c9llPn6Kqu_Q0=" },
         { day: 2, title: "Morning Canoe & Disembark", activities: ["Early morning canoe through narrow village canals", "Breakfast of appam and stew", "Disembark at Kumarakom", "Optional Kumarakom Bird Sanctuary visit"], image: "https://images.unsplash.com/photo-1593693397690-362cb9666ec2?w=800" },
       ],
       highlights: ["Houseboat overnight stay", "Kerala sadya lunch", "Village canoe tour", "Punnamada Lake cruise"],
@@ -577,7 +577,7 @@ export const tripsData = {
     {
       slug: "munnar-tea-gardens-escape",
       title: "Munnar Tea Gardens Escape",
-      image: "https://images.unsplash.com/photo-1593693397690-362cb9666ec2",
+      image: "https://images.unsplash.com/photo-1742106856585-d1fbc1582bd9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TXVubmFyJTIwVGVhJTIwR2FyZGVuc3xlbnwwfHwwfHx8MA%3D%3D",
       duration: "3 Days",
       bestTime: "September – April",
       groupSize: "2–8 people",
@@ -595,7 +595,7 @@ export const tripsData = {
     {
       slug: "kerala-wellness-ayurveda-tour",
       title: "Kerala Wellness & Ayurveda Tour",
-      image: "https://images.unsplash.com/photo-1545208393-216559629b7b",
+      image: "https://plus.unsplash.com/premium_photo-1661964388474-8f1321967997?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8S2VyYWxhJTIwV2VsbG5lc3N8ZW58MHx8MHx8fDA%3D",
       duration: "5 Days",
       bestTime: "June – September (Monsoon — best for Ayurveda)",
       groupSize: "1–4 people",
@@ -605,7 +605,7 @@ export const tripsData = {
       itinerary: [
         { day: 1, title: "Arrive & Initial Consultation", activities: ["Arrive at Ayurveda resort", "Doctor consultation and Prakriti assessment", "Gentle introductory oil massage", "Sattvic dinner"], image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800" },
         { day: 2, title: "Panchakarma Day 1", activities: ["Abhyanga full-body oil massage", "Shirodhara — warm oil pouring therapy", "Yoga and pranayama session", "Herbal bath"], image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800" },
-        { day: 3, title: "Njavara Kizhi & Meditation", activities: ["Njavara rice bolus treatment", "Guided meditation at sunrise", "Herbal steam bath", "Afternoon at leisure by the garden"], image: "https://images.unsplash.com/photo-1545208393-216559629b7b?w=800" },
+        { day: 3, title: "Njavara Kizhi & Meditation", activities: ["Njavara rice bolus treatment", "Guided meditation at sunrise", "Herbal steam bath", "Afternoon at leisure by the garden"], image: "https://images.unsplash.com/photo-1726146198233-f4ee5dcbe49c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TmphdmFyYSUyMEtpemhpJTIwJTI2JTIwTWVkaXRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D" },
         { day: 4, title: "Backwater Excursion", activities: ["Morning boat ride through calm backwaters", "Afternoon herbal consultation", "Pizhichil royal oil bath", "Evening Kathakali performance"], image: "https://images.unsplash.com/photo-1593181629936-11c609b8db9b?w=800" },
         { day: 5, title: "Final Session & Departure", activities: ["Final consultation with doctor", "Takradhara (buttermilk therapy)", "Sattvic farewell breakfast", "Departure with personalized wellness kit"], image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800" },
       ],

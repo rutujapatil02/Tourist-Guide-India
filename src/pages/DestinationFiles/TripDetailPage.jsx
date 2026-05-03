@@ -40,9 +40,9 @@ const TripDetailPage = () => {
       <DestinationHeader name={trip.title} showActions={false} />
 
       {/* Hero Image */}
-      <div className="relative h-[100vh] w-full overflow-hidden bg-black">
+      <div className="relative h-[100vh] w-full overflow-hidden">
         <img
-          src={trip.image || "https://via.placeholder.com/1400x800"}
+          src={trip.image || "https://media.istockphoto.com/id/1045842190/photo/fatehpur-sikri-anup-talao-red-sandstone-architectural-structure-at-sunset-with-moody-sky.jpg?s=612x612&w=0&k=20&c=v1icHo-kT3h5G1NMBJPQjSNzrAzedTrZJFex1vKKcco="}
           alt={trip.title}
           className="w-full h-full object-cover opacity-80"
         />
